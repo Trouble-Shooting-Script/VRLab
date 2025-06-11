@@ -135,5 +135,10 @@ public class Mino : MonoBehaviour
             var col = child.GetComponent<Collider>();
             interactable.colliders.Add(col);
         }
+        
+        // Reassign interaction manager to update the colliders
+        var manager = FindFirstObjectByType<XRInteractionManager>();
+        interactable.interactionManager = null;
+        interactable.interactionManager = manager;
     }
 }
