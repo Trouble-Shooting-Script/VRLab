@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml.Linq;
-using UnityEditor.Searcher;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -138,6 +136,7 @@ public class Mino : MonoBehaviour
         
         // Reassign interaction manager to update the colliders
         var manager = FindFirstObjectByType<XRInteractionManager>();
+        // manager.RegisterInteractable(interactable as IXRInteractable);
         interactable.interactionManager = null;
         interactable.interactionManager = manager;
     }
