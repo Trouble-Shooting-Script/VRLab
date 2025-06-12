@@ -1,15 +1,16 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class ToyMaker : MonoBehaviour
 {
     public static ToyMaker instance;
     public List<GameObject> toyList = new();
-    public Mino mino;
-    public GameObject block;
-    public GhostBlock ghostBlock;
+    public BlockSet mino;
+    public GameObject normalBlock;
+    public Block ghostBlock;
     [HideInInspector] public GameObject puzzle;
     public ShapeSetData BluePrints;
     public int[,,] Answer;
@@ -49,7 +50,7 @@ public class ToyMaker : MonoBehaviour
 
     public GameObject MakePuzzle(int[,,] bluePrint)
     {
-        Mino toy = Instantiate(mino);
+        BlockSet toy = Instantiate(mino);
         for (int x = 0; x < bluePrint.GetLength(0); x++)
         {
             for (int y = 0; y < bluePrint.GetLength(1); y++)
@@ -108,12 +109,12 @@ public class ToyMaker : MonoBehaviour
 
     public GameObject MakeToy(int[,,] bluePrint)
     {
-        return MakeToy(bluePrint, Vector3.zero);
+        return MakeToy(bluePrint, Vector3.zero, normalBlock);
     }
 
-    public GameObject MakeToy(int[,,] bluePrint, Vector3 position)
+    public GameObject MakeToy(int[,,] bluePrint, Vector3 position, GameObject prefab)
     {
-        Mino toy = Instantiate(mino);
+        BlockSet toy = Instantiate(mino);
         toy.transform.position = position;
         for (int x = 0; x < bluePrint.GetLength(0); x++)
         {
@@ -123,7 +124,7 @@ public class ToyMaker : MonoBehaviour
                 {
                     if (bluePrint[x, y, z] == 1)
                     {
-                        var b = Instantiate(block, toy.transform);
+                        var b = Instantiate(prefab, toy.transform);
                         b.transform.localPosition = new Vector3(x, y, z) * 0.01f;
                         toy.blocks.Add(b);
                     }
@@ -171,7 +172,7 @@ public class ToyMaker : MonoBehaviour
         for (int i = 0; i < bluePrints.Count; i++)
         {
             int[,,] bluePrint = bluePrints[i];
-            var toy = MakeToy(bluePrint, absBoard.transform.position + new Vector3(0.05f, 0.05f * i, 0));
+            var toy = MakeToy(bluePrint, absBoard.transform.position + new Vector3(0.05f, 0.05f * i, 0), normalBlock);
             toy.GetComponent<Mino>().UpdateCollider();
             toyList.Add(toy);
         }

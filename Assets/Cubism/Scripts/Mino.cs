@@ -5,10 +5,9 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-public class Mino : MonoBehaviour
+public class Mino : BlockSet
 {
     [SerializeField] private XRBaseInteractable interactable;
-    public List<GameObject> blocks = new List<GameObject>();
     public Vector3 startPos;
     public Quaternion startRot;
     public int[,,] snapShot;

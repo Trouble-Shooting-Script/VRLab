@@ -939,10 +939,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toyList: []
   mino: {fileID: 224406836647188174, guid: 8d1fe4cb6430326429be8ce0451196a7, type: 3}
-  block: {fileID: 8285152358295891359, guid: 8ed50b46b9521d2459227d206a91e554, type: 3}
+  normalBlock: {fileID: 8285152358295891359, guid: 8ed50b46b9521d2459227d206a91e554, type: 3}
   ghostBlock: {fileID: 440311500160966268, guid: d65150bbbab096645a54b2e0c1a81256, type: 3}
   puzzle: {fileID: 0}
-  BluePrints: {fileID: 11400000, guid: a7d61907b8a4d1d4a9c53ea286acd60e, type: 2}
+  BluePrints: {fileID: 11400000, guid: c56621d8eedf15d4fbe644ea74ae6c4e, type: 2}
 --- !u!4 &682862573
 Transform:
   m_ObjectHideFlags: 0

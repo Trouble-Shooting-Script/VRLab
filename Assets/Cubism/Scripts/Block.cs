@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Shapes;
 using UnityEngine;
 
-public class GhostBlock : MonoBehaviour
+public class Block : MonoBehaviour
 {
     public Line[] up;
     public Line[] down;
