@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -7,11 +5,12 @@ using Random = UnityEngine.Random;
 public class ToyMaker : MonoBehaviour
 {
     public static ToyMaker instance;
-    public List<GameObject> toyList = new List<GameObject>();
+    public List<GameObject> toyList = new();
     public Mino mino;
     public GameObject block;
     public Material ghostMat;
     public GameObject puzzle;
+    public ShapeSetData BluePrints;
     public int[,,] Answer;
 
     private void Awake()
@@ -30,14 +29,7 @@ public class ToyMaker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            List<int[,,]> bluePrints = new List<int[,,]>();
-
-            bluePrints = new List<int[,,]>();
-            bluePrints.Add(new int[,,]{{{1,1},{1,1}},{{1,1},{1,1}}});
-            bluePrints.Add(new int[,,]{{{1,1},{1,0}},{{1,0},{0,0}}});
-            bluePrints.Add(new int[,,]{{{1,1},{1,0}},{{1,0},{0,0}}});
-            
-            MakeBoard(bluePrints);
+            MakeBoard(BluePrints.GetAllShapes());
         }
 
         if (Input.GetKeyDown(KeyCode.Backspace))
@@ -48,6 +40,7 @@ public class ToyMaker : MonoBehaviour
                 {
                     Destroy(toy.gameObject);
                 }
+
                 toyList.Clear();
             }
         }
@@ -55,21 +48,21 @@ public class ToyMaker : MonoBehaviour
 
     private int[,,] GetRandomBluePrint()
     {
-        int[,,] bp = new int[4, 4, 4];
+        int[,,] bp = new int[4,4,4];
         for (int x = 0; x < bp.GetLength(0); x++)
         {
             for (int y = 0; y < bp.GetLength(1); y++)
             {
                 for (int z = 0; z < bp.GetLength(2); z++)
                 {
-                    bp[x,y,z] = Random.Range(0,2);
+                    bp[x, y, z] = Random.Range(0, 2);
                 }
             }
         }
 
         return bp;
     }
-    
+
     public GameObject MakeToy()
     {
         return MakeToy(GetRandomBluePrint());
@@ -79,7 +72,7 @@ public class ToyMaker : MonoBehaviour
     {
         return MakeToy(bluePrint, Vector3.zero);
     }
-    
+
     public GameObject MakeToy(int[,,] bluePrint, Vector3 position)
     {
         Mino toy = Instantiate(mino);
@@ -115,7 +108,7 @@ public class ToyMaker : MonoBehaviour
         puzzle.transform.SetParent(absBoard.transform, false);
         puzzle.name = "Puzzle";
         bluePrints.RemoveAt(0);
-        
+
         for (int x = 0; x < Answer.GetLength(0); x++)
         {
             for (int y = 0; y < Answer.GetLength(1); y++)
@@ -134,13 +127,13 @@ public class ToyMaker : MonoBehaviour
                 }
             }
         }
-        
+
         var rdrs = puzzle.GetComponentsInChildren<Renderer>();
         foreach (Renderer rdr in rdrs)
         {
             rdr.material = ghostMat;
         }
-        
+
         toyList.Add(absBoard);
 
         for (int i = 0; i < bluePrints.Count; i++)
