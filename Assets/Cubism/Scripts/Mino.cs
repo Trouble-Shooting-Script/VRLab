@@ -23,6 +23,8 @@ public class Mino : MonoBehaviour
 
     private void OnGrab(SelectEnterEventArgs args)
     {
+        Debug.Log("OnGrab");
+        
         startPos = transform.position;
         startRot = transform.rotation;
         snapShot = (int[,,])ToyMaker.instance.Answer.Clone();
@@ -55,6 +57,8 @@ public class Mino : MonoBehaviour
 
     private void OnRelease(SelectExitEventArgs args)
     {
+        Debug.Log("OnRelease");
+        
         Snap(this.transform);
         if (Transaction() == false)
         {

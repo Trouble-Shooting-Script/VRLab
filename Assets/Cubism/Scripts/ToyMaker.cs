@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -8,8 +9,8 @@ public class ToyMaker : MonoBehaviour
     public List<GameObject> toyList = new();
     public Mino mino;
     public GameObject block;
-    public Material ghostMat;
-    public GameObject puzzle;
+    public GhostBlock ghostBlock;
+    [HideInInspector] public GameObject puzzle;
     public ShapeSetData BluePrints;
     public int[,,] Answer;
 
@@ -46,26 +47,63 @@ public class ToyMaker : MonoBehaviour
         }
     }
 
-    private int[,,] GetRandomBluePrint()
+    public GameObject MakePuzzle(int[,,] bluePrint)
     {
-        int[,,] bp = new int[4,4,4];
-        for (int x = 0; x < bp.GetLength(0); x++)
+        Mino toy = Instantiate(mino);
+        for (int x = 0; x < bluePrint.GetLength(0); x++)
         {
-            for (int y = 0; y < bp.GetLength(1); y++)
+            for (int y = 0; y < bluePrint.GetLength(1); y++)
             {
-                for (int z = 0; z < bp.GetLength(2); z++)
+                for (int z = 0; z < bluePrint.GetLength(2); z++)
                 {
-                    bp[x, y, z] = Random.Range(0, 2);
+                    if (bluePrint[x, y, z] == 1)
+                    {
+                        var b = Instantiate(ghostBlock, toy.transform);
+                        b.transform.localPosition = new Vector3(x, y, z) * 0.01f;
+                        toy.blocks.Add(b.gameObject);
+
+                        if (IsThere(x, y + 1, z))
+                        {
+                            b.DisableLines(b.up);
+                        }
+                        if (IsThere(x, y - 1, z))
+                        {
+                            b.DisableLines(b.down);
+                        }
+                        if (IsThere(x - 1, y, z))
+                        {
+                            b.DisableLines(b.left);
+                        }
+                        if (IsThere(x + 1, y, z))
+                        {
+                            b.DisableLines(b.right);
+                        }
+                        if (IsThere(x, y, z - 1))
+                        {
+                            b.DisableLines(b.back);
+                        }
+                        if (IsThere(x, y, z + 1))
+                        {
+                            b.DisableLines(b.forward);
+                        }
+                    }
                 }
             }
         }
+        return toy.gameObject;
 
-        return bp;
-    }
-
-    public GameObject MakeToy()
-    {
-        return MakeToy(GetRandomBluePrint());
+        bool IsThere(int x, int y , int z)
+        {
+            try
+            {
+                return bluePrint[x, y, z] == 1;
+            }
+            catch (Exception e)
+            {
+                // out of index
+                return false;
+            }
+        }
     }
 
     public GameObject MakeToy(int[,,] bluePrint)
@@ -104,7 +142,7 @@ public class ToyMaker : MonoBehaviour
         Mino.Snap(absBoard.transform);
 
         Answer = (int[,,])bluePrints[0].Clone();
-        puzzle = MakeToy(bluePrints[0]);
+        puzzle = MakePuzzle(bluePrints[0]);
         puzzle.transform.SetParent(absBoard.transform, false);
         puzzle.name = "Puzzle";
         bluePrints.RemoveAt(0);
@@ -126,12 +164,6 @@ public class ToyMaker : MonoBehaviour
                     }
                 }
             }
-        }
-
-        var rdrs = puzzle.GetComponentsInChildren<Renderer>();
-        foreach (Renderer rdr in rdrs)
-        {
-            rdr.material = ghostMat;
         }
 
         toyList.Add(absBoard);
