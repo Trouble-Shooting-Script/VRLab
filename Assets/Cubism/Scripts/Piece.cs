@@ -5,12 +5,17 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-public class Mino : BlockSet
+public class Piece : MonoBehaviour
 {
-    [SerializeField] private XRBaseInteractable interactable;
+    // interactable variables
+    public XRBaseInteractable interactable;
     public Vector3 startPos;
     public Quaternion startRot;
-    public int[,,] snapShot;
+    
+    // block variables
+    public GameObject blockPrefab;
+    public List<GameObject> blocks = new List<GameObject>();
+    private int[,,] snapShot;
 
     private void Awake()
     {
@@ -18,6 +23,28 @@ public class Mino : BlockSet
 
         interactable.selectEntered.AddListener(OnGrab);
         interactable.selectExited.AddListener(OnRelease);
+    }
+    
+    public GameObject MakeModel(int[,,] bluePrint)
+    {
+        for (int x = 0; x < bluePrint.GetLength(0); x++)
+        {
+            for (int y = 0; y < bluePrint.GetLength(1); y++)
+            {
+                for (int z = 0; z < bluePrint.GetLength(2); z++)
+                {
+                    if (bluePrint[x, y, z] == 1)
+                    {
+                        var b = Instantiate(blockPrefab, transform);
+                        b.transform.localPosition = new Vector3(x, y, z) * 0.01f;
+                        blocks.Add(b);
+                    }
+                }
+            }
+        }
+        UpdateCollider();
+
+        return gameObject;
     }
 
     private void OnGrab(SelectEnterEventArgs args)
@@ -58,7 +85,7 @@ public class Mino : BlockSet
     {
         Debug.Log("OnRelease");
         
-        Snap(this.transform);
+        ToyMaker.Snap(this.transform);
         if (Transaction() == false)
         {
             transform.position = startPos;
@@ -83,21 +110,6 @@ public class Mino : BlockSet
                 ToyMaker.instance.Clear();
             }
         }
-    }
-
-    public static void Snap(Transform target)
-    {
-        Vector3 position = target.position;
-        position.x = Mathf.Round(position.x * 100) * 0.01f;
-        position.y = Mathf.Round(position.y * 100) * 0.01f;
-        position.z = Mathf.Round(position.z * 100) * 0.01f;
-        target.position = position;
-        
-        Vector3 euler = target.eulerAngles;
-        euler.x = Mathf.Round(euler.x / 90f) * 90f;
-        euler.y = Mathf.Round(euler.y / 90f) * 90f;
-        euler.z = Mathf.Round(euler.z / 90f) * 90f;
-        target.eulerAngles = euler;
     }
 
     private bool Transaction()
@@ -138,8 +150,7 @@ public class Mino : BlockSet
         }
         
         // Reassign interaction manager to update the colliders
-        var manager = FindFirstObjectByType<XRInteractionManager>();
-        // manager.RegisterInteractable(interactable as IXRInteractable);
+        XRInteractionManager manager = interactable.interactionManager;
         interactable.interactionManager = null;
         interactable.interactionManager = manager;
     }

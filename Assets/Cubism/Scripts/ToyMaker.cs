@@ -7,12 +7,11 @@ using Random = UnityEngine.Random;
 public class ToyMaker : MonoBehaviour
 {
     public static ToyMaker instance;
-    public List<GameObject> toyList = new();
-    public BlockSet mino;
-    public GameObject normalBlock;
-    public Block ghostBlock;
+    public List<GameObject> toyBucket = new();
+    public Sample sample;
+    public Piece piece;
     [HideInInspector] public GameObject puzzle;
-    public ShapeSetData BluePrints;
+    public ShapeSetData bluePrints;
     public int[,,] Answer;
 
     private void Awake()
@@ -31,123 +30,39 @@ public class ToyMaker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            MakeBoard(BluePrints.GetAllShapes());
+            MakeBoard(bluePrints.GetAllShapes());
         }
 
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            if (toyList != null && toyList.Count > 0)
+            if (toyBucket != null && toyBucket.Count > 0)
             {
-                foreach (var toy in toyList)
+                foreach (var toy in toyBucket)
                 {
                     Destroy(toy.gameObject);
                 }
 
-                toyList.Clear();
+                toyBucket.Clear();
             }
         }
-    }
-
-    public GameObject MakePuzzle(int[,,] bluePrint)
-    {
-        BlockSet toy = Instantiate(mino);
-        for (int x = 0; x < bluePrint.GetLength(0); x++)
-        {
-            for (int y = 0; y < bluePrint.GetLength(1); y++)
-            {
-                for (int z = 0; z < bluePrint.GetLength(2); z++)
-                {
-                    if (bluePrint[x, y, z] == 1)
-                    {
-                        var b = Instantiate(ghostBlock, toy.transform);
-                        b.transform.localPosition = new Vector3(x, y, z) * 0.01f;
-                        toy.blocks.Add(b.gameObject);
-
-                        if (IsThere(x, y + 1, z))
-                        {
-                            b.DisableLines(b.up);
-                        }
-                        if (IsThere(x, y - 1, z))
-                        {
-                            b.DisableLines(b.down);
-                        }
-                        if (IsThere(x - 1, y, z))
-                        {
-                            b.DisableLines(b.left);
-                        }
-                        if (IsThere(x + 1, y, z))
-                        {
-                            b.DisableLines(b.right);
-                        }
-                        if (IsThere(x, y, z - 1))
-                        {
-                            b.DisableLines(b.back);
-                        }
-                        if (IsThere(x, y, z + 1))
-                        {
-                            b.DisableLines(b.forward);
-                        }
-                    }
-                }
-            }
-        }
-        return toy.gameObject;
-
-        bool IsThere(int x, int y , int z)
-        {
-            try
-            {
-                return bluePrint[x, y, z] == 1;
-            }
-            catch (Exception e)
-            {
-                // out of index
-                return false;
-            }
-        }
-    }
-
-    public GameObject MakeToy(int[,,] bluePrint)
-    {
-        return MakeToy(bluePrint, Vector3.zero, normalBlock);
-    }
-
-    public GameObject MakeToy(int[,,] bluePrint, Vector3 position, GameObject prefab)
-    {
-        BlockSet toy = Instantiate(mino);
-        toy.transform.position = position;
-        for (int x = 0; x < bluePrint.GetLength(0); x++)
-        {
-            for (int y = 0; y < bluePrint.GetLength(1); y++)
-            {
-                for (int z = 0; z < bluePrint.GetLength(2); z++)
-                {
-                    if (bluePrint[x, y, z] == 1)
-                    {
-                        var b = Instantiate(prefab, toy.transform);
-                        b.transform.localPosition = new Vector3(x, y, z) * 0.01f;
-                        toy.blocks.Add(b);
-                    }
-                }
-            }
-        }
-
-        return toy.gameObject;
     }
 
     private void MakeBoard(List<int[,,]> bluePrints)
     {
+        // create a board
         GameObject absBoard = new GameObject();
         absBoard.transform.position = Camera.main.transform.position + new Vector3(0, 0, 0.1f);
         absBoard.name = "Board";
-        Mino.Snap(absBoard.transform);
+        Snap(absBoard.transform);
 
-        Answer = (int[,,])bluePrints[0].Clone();
-        puzzle = MakePuzzle(bluePrints[0]);
-        puzzle.transform.SetParent(absBoard.transform, false);
+        // create a puzzle
+        Sample sam = Instantiate(sample, absBoard.transform);
+        puzzle = sam.MakeModel(bluePrints[0]);
         puzzle.name = "Puzzle";
-        bluePrints.RemoveAt(0);
+        toyBucket.Add(absBoard);
 
+        // create an answer array
+        Answer = (int[,,])bluePrints[0].Clone();
         for (int x = 0; x < Answer.GetLength(0); x++)
         {
             for (int y = 0; y < Answer.GetLength(1); y++)
@@ -167,19 +82,35 @@ public class ToyMaker : MonoBehaviour
             }
         }
 
-        toyList.Add(absBoard);
 
-        for (int i = 0; i < bluePrints.Count; i++)
+        // create pieces
+        for (int i = 1; i < bluePrints.Count; i++)
         {
-            int[,,] bluePrint = bluePrints[i];
-            var toy = MakeToy(bluePrint, absBoard.transform.position + new Vector3(0.05f, 0.05f * i, 0), normalBlock);
-            toy.GetComponent<Mino>().UpdateCollider();
-            toyList.Add(toy);
+            Piece piece = Instantiate(this.piece, absBoard.transform);
+            piece.transform.localPosition += new Vector3((bluePrints[0].GetLength(0) + 3) * 0.01f, 0.05f * i, 0);
+            piece.MakeModel(bluePrints[i]);
+            piece.name = "Piece_" + i;
+            toyBucket.Add(piece.gameObject);
         }
     }
 
     public void Clear()
     {
         Debug.Log("아 성공");
+    }
+    
+    public static void Snap(Transform target)
+    {
+        Vector3 position = target.position;
+        position.x = Mathf.Round(position.x * 100) * 0.01f;
+        position.y = Mathf.Round(position.y * 100) * 0.01f;
+        position.z = Mathf.Round(position.z * 100) * 0.01f;
+        target.position = position;
+        
+        Vector3 euler = target.eulerAngles;
+        euler.x = Mathf.Round(euler.x / 90f) * 90f;
+        euler.y = Mathf.Round(euler.y / 90f) * 90f;
+        euler.z = Mathf.Round(euler.z / 90f) * 90f;
+        target.eulerAngles = euler;
     }
 }

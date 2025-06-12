@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3732766702511346601}
   - component: {fileID: -4833975410038069852}
   m_Layer: 0
-  m_Name: Mino
+  m_Name: Piece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,9 +47,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  blocks: []
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0, w: 0}
+  blockPrefab: {fileID: 8285152358295891359, guid: 8ed50b46b9521d2459227d206a91e554, type: 3}
+  blocks: []
 --- !u!54 &-3732766702511346601
 Rigidbody:
   m_ObjectHideFlags: 0

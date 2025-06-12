@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 8407557386874153745}
   - component: {fileID: 799296466352337329}
   m_Layer: 0
-  m_Name: FR
+  m_Name: RF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 3084926761491598676}
   - component: {fileID: 7264400451638455139}
   m_Layer: 0
-  m_Name: FL
+  m_Name: LF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1249,7 +1249,7 @@ GameObject:
   - component: {fileID: 217835034244133361}
   - component: {fileID: 6636266307862766314}
   m_Layer: 0
-  m_Name: BL
+  m_Name: LB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1380,7 +1380,7 @@ GameObject:
   - component: {fileID: 4124279490067843171}
   - component: {fileID: 440311500160966268}
   m_Layer: 0
-  m_Name: GhostBlock
+  m_Name: SampleBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1495,36 +1495,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cf9308b1cd9fa2459bab0d2ffd18e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  up:
-  - {fileID: 4760325811314049347}
-  - {fileID: 3032065461057926166}
-  - {fileID: 6269862993353782828}
-  - {fileID: 2401613509177294848}
-  down:
-  - {fileID: 5443194547887547949}
-  - {fileID: 6916128447549237634}
-  - {fileID: 3074119336461159437}
-  - {fileID: 4406852001196264930}
-  left:
-  - {fileID: 8715469426019224613}
-  - {fileID: 7471491348268554808}
-  - {fileID: 3032065461057926166}
-  - {fileID: 4406852001196264930}
-  right:
-  - {fileID: 1777887452583410558}
-  - {fileID: 982427893129418618}
-  - {fileID: 2401613509177294848}
-  - {fileID: 6916128447549237634}
-  forward:
-  - {fileID: 1777887452583410558}
-  - {fileID: 8715469426019224613}
-  - {fileID: 4760325811314049347}
-  - {fileID: 5443194547887547949}
-  back:
-  - {fileID: 982427893129418618}
-  - {fileID: 7471491348268554808}
-  - {fileID: 6269862993353782828}
-  - {fileID: 3074119336461159437}
+  Flag:
+    L: 0
+    R: 0
+    U: 0
+    D: 0
+    F: 0
+    B: 0
+    LU: 0
+    LD: 0
+    LF: 0
+    LB: 0
+    RU: 0
+    RD: 0
+    RF: 0
+    RB: 0
+    FU: 0
+    FD: 0
+    BU: 0
+    BD: 0
+  Line:
+    LU: {fileID: 2600426127466463436}
+    LD: {fileID: 7480462290144257971}
+    RU: {fileID: 3211046587052958618}
+    RD: {fileID: 754727356696695999}
+    FU: {fileID: 7702233012117012938}
+    FD: {fileID: 1880871457071166100}
+    BU: {fileID: 5599323715031681658}
+    BD: {fileID: 5751077800867995377}
+    LF: {fileID: 2482935675713319461}
+    RF: {fileID: 1454383586953904437}
+    LB: {fileID: 3388117738014597133}
+    RB: {fileID: 6972756241151080576}
 --- !u!1 &5599323715031681658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1951,7 +1953,7 @@ GameObject:
   - component: {fileID: 9123525107781007082}
   - component: {fileID: 2584763203027005110}
   m_Layer: 0
-  m_Name: BR
+  m_Name: RB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2471,18 +2473,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1567681262779249104}
-  - {fileID: 2301393126537505914}
-  - {fileID: 3120096061654421313}
-  - {fileID: 8515126841829952244}
-  - {fileID: 5586556349718166255}
   - {fileID: 4695998379201415467}
-  - {fileID: 6415880409003205927}
-  - {fileID: 8581329513133569137}
-  - {fileID: 8125792459319888070}
-  - {fileID: 7456701958895098958}
-  - {fileID: 3153332379630723871}
   - {fileID: 1855658391301090717}
+  - {fileID: 8581329513133569137}
+  - {fileID: 7456701958895098958}
+  - {fileID: 5586556349718166255}
+  - {fileID: 8125792459319888070}
+  - {fileID: 6415880409003205927}
+  - {fileID: 3153332379630723871}
+  - {fileID: 2301393126537505914}
+  - {fileID: 1567681262779249104}
+  - {fileID: 8515126841829952244}
+  - {fileID: 3120096061654421313}
   m_Father: {fileID: 316882446958870051}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8300131475187493992
