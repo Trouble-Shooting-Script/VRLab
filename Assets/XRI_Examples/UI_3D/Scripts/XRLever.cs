@@ -31,7 +31,7 @@ namespace UnityEngine.XR.Content.Interaction
 
         [SerializeField]
         [Tooltip("Angle of the lever in the 'off' position")]
-        [Range(-90.0f, 90.0f)]
+        [Range(-180.0f, 180.0f)]
         float m_MinAngle = -90.0f;
 
         [SerializeField]
