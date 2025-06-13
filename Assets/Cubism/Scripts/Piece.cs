@@ -54,7 +54,7 @@ public class Piece : MonoBehaviour
         startPos = transform.position;
         startRot = transform.rotation;
         snapShot = (int[,,])ToyMaker.instance.Answer.Clone();
-
+        
         // separate blocks from puzzle
         #region duplicate code
         foreach (var block in blocks)

@@ -98,7 +98,11 @@ public class ToyMaker : MonoBehaviour
     {
         Debug.Log("아 성공");
     }
+
+    #region  grid system
     
+    public const float CELL_SIZE = 0.01f;
+    public float CellSizeInverse => 1f / CELL_SIZE;
     public static void Snap(Transform target)
     {
         Vector3 position = target.position;
@@ -113,4 +117,5 @@ public class ToyMaker : MonoBehaviour
         euler.z = Mathf.Round(euler.z / 90f) * 90f;
         target.eulerAngles = euler;
     }
+    #endregion
 }
