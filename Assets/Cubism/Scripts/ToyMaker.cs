@@ -51,9 +51,9 @@ public class ToyMaker : MonoBehaviour
     {
         // create a board
         GameObject absBoard = new GameObject();
-        absBoard.transform.position = Camera.main.transform.position + new Vector3(0, 0, 0.1f);
+        absBoard.transform.position = Camera.main.transform.position + new Vector3(0, -0.1f, 0.3f);
         absBoard.name = "Board";
-        Snap(absBoard.transform);
+        GridSystem.Snap(absBoard.transform);
 
         // create a puzzle
         Sample sam = Instantiate(sample, absBoard.transform);
@@ -87,7 +87,8 @@ public class ToyMaker : MonoBehaviour
         for (int i = 1; i < bluePrints.Count; i++)
         {
             Piece piece = Instantiate(this.piece, absBoard.transform);
-            piece.transform.localPosition += new Vector3((bluePrints[0].GetLength(0) + 3) * 0.01f, 0.05f * i, 0);
+            piece.transform.localPosition += new Vector3((bluePrints[0].GetLength(0) + 3) * GridSystem.CELL_SIZE,
+                0.15f * i, 0);
             piece.MakeModel(bluePrints[i]);
             piece.name = "Piece_" + i;
             toyBucket.Add(piece.gameObject);
@@ -98,24 +99,4 @@ public class ToyMaker : MonoBehaviour
     {
         Debug.Log("아 성공");
     }
-
-    #region  grid system
-    
-    public const float CELL_SIZE = 0.01f;
-    public float CellSizeInverse => 1f / CELL_SIZE;
-    public static void Snap(Transform target)
-    {
-        Vector3 position = target.position;
-        position.x = Mathf.Round(position.x * 100) * 0.01f;
-        position.y = Mathf.Round(position.y * 100) * 0.01f;
-        position.z = Mathf.Round(position.z * 100) * 0.01f;
-        target.position = position;
-        
-        Vector3 euler = target.eulerAngles;
-        euler.x = Mathf.Round(euler.x / 90f) * 90f;
-        euler.y = Mathf.Round(euler.y / 90f) * 90f;
-        euler.z = Mathf.Round(euler.z / 90f) * 90f;
-        target.eulerAngles = euler;
-    }
-    #endregion
 }

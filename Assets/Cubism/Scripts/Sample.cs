@@ -24,7 +24,8 @@ public class Sample : MonoBehaviour
                     if (bluePrint[x, y, z] == 1)
                     {
                         var b = Instantiate(blockPrefab, transform);
-                        b.transform.localPosition = new Vector3(x, y, z) * 0.01f;
+                        b.transform.localScale = Vector3.one * (GridSystem.CELL_SIZE * 0.9921875f);
+                        b.transform.localPosition = new Vector3(x, y, z) * GridSystem.CELL_SIZE;
                         Blueprint[x, y, z] = b;
                     }
                 }

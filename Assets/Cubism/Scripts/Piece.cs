@@ -36,7 +36,8 @@ public class Piece : MonoBehaviour
                     if (bluePrint[x, y, z] == 1)
                     {
                         var b = Instantiate(blockPrefab, transform);
-                        b.transform.localPosition = new Vector3(x, y, z) * 0.01f;
+                        b.transform.localScale = Vector3.one * GridSystem.CELL_SIZE;
+                        b.transform.localPosition = new Vector3(x, y, z) * GridSystem.CELL_SIZE;
                         blocks.Add(b);
                     }
                 }
@@ -49,8 +50,6 @@ public class Piece : MonoBehaviour
 
     private void OnGrab(SelectEnterEventArgs args)
     {
-        Debug.Log("OnGrab");
-        
         startPos = transform.position;
         startRot = transform.rotation;
         snapShot = (int[,,])ToyMaker.instance.Answer.Clone();
@@ -59,7 +58,7 @@ public class Piece : MonoBehaviour
         #region duplicate code
         foreach (var block in blocks)
         {
-            Vector3 coord = (block.transform.position - ToyMaker.instance.puzzle.transform.position) * 100f;
+            Vector3 coord = (block.transform.position - ToyMaker.instance.puzzle.transform.position) / GridSystem.CELL_SIZE;
             int x = Mathf.RoundToInt(coord.x);
             int y = Mathf.RoundToInt(coord.y);
             int z = Mathf.RoundToInt(coord.z);
@@ -83,9 +82,7 @@ public class Piece : MonoBehaviour
 
     private void OnRelease(SelectExitEventArgs args)
     {
-        Debug.Log("OnRelease");
-        
-        ToyMaker.Snap(this.transform);
+        GridSystem.Snap(this.transform);
         if (Transaction() == false)
         {
             transform.position = startPos;
@@ -116,7 +113,7 @@ public class Piece : MonoBehaviour
     {
         foreach (var block in blocks)
         {
-            Vector3 coord = (block.transform.position - ToyMaker.instance.puzzle.transform.position) * 100f;
+            Vector3 coord = (block.transform.position - ToyMaker.instance.puzzle.transform.position) / GridSystem.CELL_SIZE;
             int x = Mathf.RoundToInt(coord.x);
             int y = Mathf.RoundToInt(coord.y);
             int z = Mathf.RoundToInt(coord.z);
@@ -129,6 +126,7 @@ public class Piece : MonoBehaviour
                         return false;
                     case 0:
                         snapShot[x, y, z] = 1;
+                        Debug.Log($"{x},{y},{z} 채워짐");
                         break;
                 }
             }
