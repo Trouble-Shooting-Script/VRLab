@@ -15,7 +15,7 @@ public class Piece : MonoBehaviour
     // block variables
     public GameObject blockPrefab;
     public List<GameObject> blocks = new List<GameObject>();
-    private int[,,] snapShot;
+    private int[,,] snapshot;
 
     private void Awake()
     {
@@ -52,48 +52,26 @@ public class Piece : MonoBehaviour
     {
         startPos = transform.position;
         startRot = transform.rotation;
-        snapShot = (int[,,])ToyMaker.instance.Answer.Clone();
+        snapshot = (int[,,])ToyMaker.instance.Answer.Clone();
         
         // separate blocks from puzzle
-        #region duplicate code
-        foreach (var block in blocks)
-        {
-            Vector3 coord = (block.transform.position - ToyMaker.instance.puzzle.transform.position) / GridSystem.CELL_SIZE;
-            int x = Mathf.RoundToInt(coord.x);
-            int y = Mathf.RoundToInt(coord.y);
-            int z = Mathf.RoundToInt(coord.z);
-
-            try
-            {
-                switch (snapShot[x, y, z])
-                {
-                    case 1:
-                        snapShot[x, y, z] = 0;
-                        break;
-                }
-            }
-            catch (Exception e)
-            {
-                // out of index
-            }
-        }
-        #endregion
+        TryUpdateSnapshot(0, v => v == 1);
     }
 
     private void OnRelease(SelectExitEventArgs args)
     {
         GridSystem.Snap(this.transform);
-        if (Transaction() == false)
+        if (Merge() == false)
         {
             transform.position = startPos;
             transform.rotation = startRot;
         }
         else
         {
-            ToyMaker.instance.Answer = snapShot;
+            ToyMaker.instance.Answer = snapshot;
             
             bool isSolved = true;
-            foreach (int i in snapShot)
+            foreach (int i in snapshot)
             {
                 if (i == 0)
                 {
@@ -109,7 +87,12 @@ public class Piece : MonoBehaviour
         }
     }
 
-    private bool Transaction()
+    private bool Merge()
+    {
+        return TryUpdateSnapshot(1, v => v == 0);
+    }
+
+    private bool TryUpdateSnapshot(int valueToSet, Func<int,bool> targetCondition, Func<int, bool> returnCondition = null)
     {
         foreach (var block in blocks)
         {
@@ -120,14 +103,13 @@ public class Piece : MonoBehaviour
 
             try
             {
-                switch (snapShot[x, y, z])
+                if(targetCondition(snapshot[x, y, z]))
                 {
-                    case 1:
-                        return false;
-                    case 0:
-                        snapShot[x, y, z] = 1;
-                        Debug.Log($"{x},{y},{z} 채워짐");
-                        break;
+                    snapshot[x, y, z] = valueToSet;
+                }
+                else if (returnCondition != null && returnCondition(snapshot[x, y, z]))
+                {
+                    return false;
                 }
             }
             catch (Exception e)
