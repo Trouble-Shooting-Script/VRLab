@@ -2611,7 +2611,7 @@ PrefabInstance:
     - target: {fileID: 6850588159419989970, guid: dc816a9e7ca89a74cbb9759f9033d9b7, type: 3}
       propertyPath: bluePrints
       value: 
-      objectReference: {fileID: 11400000, guid: cd166c588d11baa498a156c42892efda, type: 2}
+      objectReference: {fileID: 11400000, guid: a7d61907b8a4d1d4a9c53ea286acd60e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

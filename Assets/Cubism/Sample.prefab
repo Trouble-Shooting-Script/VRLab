@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2073256667288989518}
   - component: {fileID: 5253864124338152408}
+  - component: {fileID: -1279003052754099202}
   m_Layer: 0
   m_Name: Sample
   m_TagString: Cubism_Sample
@@ -45,3 +46,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockPrefab: {fileID: 440311500160966268, guid: d65150bbbab096645a54b2e0c1a81256, type: 3}
+--- !u!54 &-1279003052754099202
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9119634691098292039}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

@@ -9,13 +9,13 @@ public class ToyMaker : MonoBehaviour
     public static ToyMaker instance;
     private static Color[] colors =
     {
-        new Color(1.000f, 0.718f, 0.698f, 1.0f),
-        new Color(0.698f, 0.922f, 0.949f, 1.0f),
-        new Color(0.698f, 0.949f, 0.733f, 1.0f),
-        new Color(0.784f, 0.749f, 0.906f, 1.0f),
-        new Color(1.000f, 0.875f, 0.729f, 1.0f),
-        new Color(1.000f, 0.980f, 0.804f, 1.0f),
-        new Color(1.000f, 0.894f, 0.882f, 1.0f)
+        new Color(1.000f, 0.595f, 0.541f, 1.0f),
+        new Color(0.448f, 0.922f, 0.949f, 1.0f),
+        new Color(0.448f, 0.949f, 0.629f, 1.0f),
+        new Color(0.597f, 0.505f, 0.906f, 1.0f),
+        new Color(1.000f, 0.729f, 0.458f, 1.0f),
+        new Color(1.000f, 0.882f, 0.610f, 1.0f),
+        new Color(1.000f, 0.764f, 0.741f, 1.0f)
     };
     public List<GameObject> toyBucket = new();
     public Sample sample;

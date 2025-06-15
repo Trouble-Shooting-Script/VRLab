@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GridSystem : MonoBehaviour
 {
-    public const float CELL_SIZE = 0.03f;
+    public const float CELL_SIZE = 0.03125f;
 
     public static void Snap(Transform target)
     {

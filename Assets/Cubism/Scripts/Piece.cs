@@ -7,8 +7,12 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class Piece : MonoBehaviour
 {
+    private static readonly int EMISSION_COLOR = Shader.PropertyToID("_EmissionColor");
+    private static readonly int COLOR = Shader.PropertyToID("_AlbedoColor");
+
     // interactable variables
     public XRBaseInteractable interactable;
+    public new Rigidbody rigidbody;
     public Vector3 startPos;
     public Quaternion startRot;
     public Transform startTransform;
@@ -24,6 +28,8 @@ public class Piece : MonoBehaviour
 
         interactable.selectEntered.AddListener(OnGrab);
         interactable.selectExited.AddListener(OnRelease);
+        
+        rigidbody = GetComponent<Rigidbody>();
     }
     
     public GameObject MakeModel(int[,,] bluePrint, Color color)
@@ -39,8 +45,15 @@ public class Piece : MonoBehaviour
                         var b = Instantiate(blockPrefab, transform);
                         b.transform.localScale = Vector3.one * GridSystem.CELL_SIZE;
                         b.transform.localPosition = new Vector3(x, y, z) * GridSystem.CELL_SIZE;
+                        
+                        // set block color
+                        Color.RGBToHSV(color, out float h, out float s, out float v);
+                        Color emissionColor = Color.HSVToRGB(h, s * 2, v);
                         var r = b.GetComponent<Renderer>();
-                        r.material.color = color;
+                        r.material.EnableKeyword("_MK_EMISSION");
+                        r.material.SetColor(COLOR, color);
+                        r.material.SetColor(EMISSION_COLOR, emissionColor);
+                        
                         blocks.Add(b);
                     }
                 }
@@ -139,5 +152,15 @@ public class Piece : MonoBehaviour
         XRInteractionManager manager = interactable.interactionManager;
         interactable.interactionManager = null;
         interactable.interactionManager = manager;
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Debug.Log("collision enter");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("trigger enter");
     }
 }
