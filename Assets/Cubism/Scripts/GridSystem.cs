@@ -5,7 +5,6 @@ using UnityEngine;
 public class GridSystem : MonoBehaviour
 {
     public const float CELL_SIZE = 0.03125f;
-    public float CellSizeInverse => 1f / CELL_SIZE;
     public static void Snap(Transform target)
     {
         Vector3 position = target.position;

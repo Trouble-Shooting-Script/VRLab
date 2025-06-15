@@ -7,6 +7,16 @@ using Random = UnityEngine.Random;
 public class ToyMaker : MonoBehaviour
 {
     public static ToyMaker instance;
+    private static Color[] colors =
+    {
+        new Color(1.000f, 0.718f, 0.698f, 1.0f),
+        new Color(0.698f, 0.922f, 0.949f, 1.0f),
+        new Color(0.698f, 0.949f, 0.733f, 1.0f),
+        new Color(0.784f, 0.749f, 0.906f, 1.0f),
+        new Color(1.000f, 0.875f, 0.729f, 1.0f),
+        new Color(1.000f, 0.980f, 0.804f, 1.0f),
+        new Color(1.000f, 0.894f, 0.882f, 1.0f)
+    };
     public List<GameObject> toyBucket = new();
     public Sample sample;
     public Piece piece;
@@ -84,12 +94,13 @@ public class ToyMaker : MonoBehaviour
 
 
         // create pieces
+        Color[] shuffledColor = RandomUtil.GetShuffled(colors);
         for (int i = 1; i < bluePrints.Count; i++)
         {
             Piece piece = Instantiate(this.piece, absBoard.transform);
             piece.transform.localPosition += new Vector3((bluePrints[0].GetLength(0) + 3) * GridSystem.CELL_SIZE,
-                0.15f * i, 0);
-            piece.MakeModel(bluePrints[i]);
+                0.15f * (i - 1), 0);
+            piece.MakeModel(bluePrints[i], shuffledColor[i % shuffledColor.Length]);
             piece.name = "Piece_" + i;
             toyBucket.Add(piece.gameObject);
         }

@@ -25,7 +25,7 @@ public class Piece : MonoBehaviour
         interactable.selectExited.AddListener(OnRelease);
     }
     
-    public GameObject MakeModel(int[,,] bluePrint)
+    public GameObject MakeModel(int[,,] bluePrint, Color color)
     {
         for (int x = 0; x < bluePrint.GetLength(0); x++)
         {
@@ -38,6 +38,8 @@ public class Piece : MonoBehaviour
                         var b = Instantiate(blockPrefab, transform);
                         b.transform.localScale = Vector3.one * GridSystem.CELL_SIZE;
                         b.transform.localPosition = new Vector3(x, y, z) * GridSystem.CELL_SIZE;
+                        var r = b.GetComponent<Renderer>();
+                        r.material.color = color;
                         blocks.Add(b);
                     }
                 }
@@ -91,7 +93,7 @@ public class Piece : MonoBehaviour
     {
         return TryUpdateSnapshot(1, v => v == 0);
     }
-
+    
     private bool TryUpdateSnapshot(int valueToSet, Func<int,bool> targetCondition, Func<int, bool> returnCondition = null)
     {
         foreach (var block in blocks)
