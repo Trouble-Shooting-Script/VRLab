@@ -54,8 +54,6 @@ public class ShapeSetData : ScriptableObject
             }
         }
         
-        Debug.Log($"x{xSize},y{ySize},z{zSize}");
-        
         return result;
     }
 }

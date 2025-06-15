@@ -64,12 +64,12 @@ public class ToyMaker : MonoBehaviour
         absBoard.transform.position = Camera.main.transform.position + new Vector3(0, -0.1f, 0.3f);
         absBoard.name = "Board";
         GridSystem.Snap(absBoard.transform);
+        toyBucket.Add(absBoard);
 
         // create a puzzle
         Sample sam = Instantiate(sample, absBoard.transform);
         puzzle = sam.MakeModel(bluePrints[0]);
         puzzle.name = "Puzzle";
-        toyBucket.Add(absBoard);
 
         // create an answer array
         Answer = (int[,,])bluePrints[0].Clone();

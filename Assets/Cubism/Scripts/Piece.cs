@@ -64,8 +64,8 @@ public class Piece : MonoBehaviour
 
     private void OnRelease(SelectExitEventArgs args)
     {
-        GridSystem.Snap(this.transform);
-        if (Merge() == false)
+        GridSystem.RelativeSnap(this.transform, ToyMaker.instance.puzzle.transform);
+        if (TryMerge() == false)
         {
             transform.position = startPos;
             transform.rotation = startRot;
@@ -74,7 +74,6 @@ public class Piece : MonoBehaviour
         else
         {
             ToyMaker.instance.Answer = snapshot;
-            transform.SetParent(ToyMaker.instance.puzzle.transform);
             
             bool isSolved = true;
             foreach (int i in snapshot)
@@ -93,16 +92,16 @@ public class Piece : MonoBehaviour
         }
     }
 
-    private bool Merge()
+    private bool TryMerge()
     {
         return TryUpdateSnapshot(1, v => v == 0);
     }
     
-    private bool TryUpdateSnapshot(int valueToSet, Func<int,bool> targetCondition, Func<int, bool> returnCondition = null)
+    private bool TryUpdateSnapshot(int valueToSet, Func<int,bool> targetCondition, Func<int, bool> conflictCheck = null)
     {
         foreach (var block in blocks)
         {
-            Vector3 coord = (block.transform.position - ToyMaker.instance.puzzle.transform.position) / GridSystem.CELL_SIZE;
+            Vector3 coord = ToyMaker.instance.puzzle.transform.InverseTransformPoint(block.transform.position) / GridSystem.CELL_SIZE;
             int x = Mathf.RoundToInt(coord.x);
             int y = Mathf.RoundToInt(coord.y);
             int z = Mathf.RoundToInt(coord.z);
@@ -112,8 +111,9 @@ public class Piece : MonoBehaviour
                 if(targetCondition(snapshot[x, y, z]))
                 {
                     snapshot[x, y, z] = valueToSet;
+                    Debug.Log($"{x}, {y}, {z} set to {valueToSet} in snapshot");
                 }
-                else if (returnCondition != null && returnCondition(snapshot[x, y, z]))
+                else if (conflictCheck != null && conflictCheck(snapshot[x, y, z]))
                 {
                     return false;
                 }

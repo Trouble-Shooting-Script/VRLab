@@ -49,6 +49,7 @@ MonoBehaviour:
   interactable: {fileID: 0}
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0, w: 0}
+  startTransform: {fileID: 0}
   blockPrefab: {fileID: 8285152358295891359, guid: 8ed50b46b9521d2459227d206a91e554, type: 3}
   blocks: []
 --- !u!54 &-3732766702511346601
