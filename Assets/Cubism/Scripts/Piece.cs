@@ -11,6 +11,7 @@ public class Piece : MonoBehaviour
     public XRBaseInteractable interactable;
     public Vector3 startPos;
     public Quaternion startRot;
+    public Transform startTransform;
     
     // block variables
     public GameObject blockPrefab;
@@ -54,6 +55,7 @@ public class Piece : MonoBehaviour
     {
         startPos = transform.position;
         startRot = transform.rotation;
+        startTransform = transform.parent;
         snapshot = (int[,,])ToyMaker.instance.Answer.Clone();
         
         // separate blocks from puzzle
@@ -67,10 +69,12 @@ public class Piece : MonoBehaviour
         {
             transform.position = startPos;
             transform.rotation = startRot;
+            transform.parent = startTransform;
         }
         else
         {
             ToyMaker.instance.Answer = snapshot;
+            transform.SetParent(ToyMaker.instance.puzzle.transform);
             
             bool isSolved = true;
             foreach (int i in snapshot)

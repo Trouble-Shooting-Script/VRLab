@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -4833975410038069852}
   m_Layer: 0
   m_Name: Piece
-  m_TagString: Untagged
+  m_TagString: Cubism_Piece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_SmoothRotation: 0
   m_SmoothRotationAmount: 8
   m_TightenRotation: 0.1
-  m_TrackScale: 1
+  m_TrackScale: 0
   m_SmoothScale: 0
   m_SmoothScaleAmount: 8
   m_TightenScale: 0.1
