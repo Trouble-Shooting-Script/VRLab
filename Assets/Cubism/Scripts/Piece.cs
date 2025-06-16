@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using EPOOutline;
 using UnityEditor.Searcher;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -16,6 +17,7 @@ public class Piece : MonoBehaviour
     public new Rigidbody rigidbody;
     
     public Transform boardTransform;
+    public Outlinable outlinable;
     
     // block variables
     public GameObject blockPrefab;
@@ -24,17 +26,31 @@ public class Piece : MonoBehaviour
 
     private void Awake()
     {
+        rigidbody = GetComponent<Rigidbody>();
+        outlinable = GetComponent<Outlinable>();
         interactable = GetComponent<XRBaseInteractable>();
 
+        interactable.hoverEntered.AddListener((arg0 =>
+        {
+            outlinable.enabled = true;
+        }));
+        interactable.hoverExited.AddListener((arg0 =>
+        {
+            if (interactable.isSelected == false)
+            {
+                outlinable.enabled = false;
+            }
+        }));
         interactable.selectEntered.AddListener(OnGrab);
         interactable.selectExited.AddListener(OnRelease);
-        
-        rigidbody = GetComponent<Rigidbody>();
     }
 
     private void Start()
     {
         boardTransform = transform.parent;
+        outlinable.AddAllChildRenderersToRenderingList();
+        outlinable.OutlineParameters.Color = Color.white;
+        outlinable.enabled = false;
     }
 
     public GameObject MakeModel(int[,,] bluePrint, Color color)
@@ -71,14 +87,22 @@ public class Piece : MonoBehaviour
 
     private void OnGrab(SelectEnterEventArgs args)
     {
+        outlinable.enabled = true;
+        rigidbody.isKinematic = false;
+        
         snapshot = (int[,,])ToyMaker.instance.Answer.Clone();
         
         // separate blocks from puzzle
-        TryUpdateSnapshot(0, v => v == 1);
+        if (TryUpdateSnapshot(0, v => v == 1))
+        {
+            Debug.Log("Piece grabbed, blocks separated from puzzle.");
+        };
     }
 
     private void OnRelease(SelectExitEventArgs args)
     {
+        outlinable.enabled = false;
+        
         // snap to grid
         Vector3 pos = transform.position;
         Quaternion rot = transform.rotation;
@@ -118,13 +142,12 @@ public class Piece : MonoBehaviour
     private bool TryMerge()
     {
         bool isUpdateSuccess = TryUpdateSnapshot(1, v => v == 0, i => i == 1, out bool isInArea);
-        Debug.Log($"{isUpdateSuccess} / {isInArea}");
         return isUpdateSuccess && isInArea;
     }
 
-    private void TryUpdateSnapshot(int valueToSet, Func<int, bool> targetCondition)
+    private bool TryUpdateSnapshot(int valueToSet, Func<int, bool> targetCondition)
     {
-        TryUpdateSnapshot(valueToSet, targetCondition, null, out bool isInPuzzle);
+        return TryUpdateSnapshot(valueToSet, targetCondition, null, out bool isInPuzzle);
     }
     
     private bool TryUpdateSnapshot(int valueToSet, Func<int,bool> targetCondition, Func<int, bool> conflictCheck, out bool isInArea)

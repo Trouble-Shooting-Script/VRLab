@@ -49,3 +49,4 @@ MonoBehaviour:
   piecePrefab: {fileID: 224406836647188174, guid: 8d1fe4cb6430326429be8ce0451196a7, type: 3}
   puzzle: {fileID: 0}
   bluePrintsData: {fileID: 11400000, guid: a7d61907b8a4d1d4a9c53ea286acd60e, type: 2}
+  data: {fileID: 11400000, guid: cd166c588d11baa498a156c42892efda, type: 2}

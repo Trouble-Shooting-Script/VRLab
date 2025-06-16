@@ -25,6 +25,9 @@ public class ToyMaker : MonoBehaviour
     public ShapeSetData bluePrintsData;
     public int[,,] Answer;
 
+
+    public ShapeSetData data;
+
     private void Awake()
     {
         if (instance == null)
@@ -41,9 +44,8 @@ public class ToyMaker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            MakeBoard(bluePrintsData.GetAllShapes());
+            MakeBoard(data);
         }
-
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
             if (toyBucket != null && toyBucket.Count > 0)
@@ -58,8 +60,9 @@ public class ToyMaker : MonoBehaviour
         }
     }
 
-    private void MakeBoard(List<int[,,]> bluePrints)
+    public void MakeBoard(ShapeSetData shapeSetData)
     {
+        var bluePrints = shapeSetData.GetAllShapes();
         int[,,] puzzleShape = bluePrints[0];
         bluePrints.Remove(puzzleShape);
         
