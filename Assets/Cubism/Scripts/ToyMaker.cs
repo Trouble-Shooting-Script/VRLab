@@ -44,7 +44,7 @@ public class ToyMaker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            MakeBoard(data);
+            MakeBoard(data, Camera.main.transform.position + new Vector3(0, -0.1f, 0.3f), Quaternion.identity);
         }
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
@@ -62,6 +62,21 @@ public class ToyMaker : MonoBehaviour
 
     public void MakeBoard(ShapeSetData shapeSetData)
     {
+        MakeBoard(shapeSetData, Camera.main.transform.position + new Vector3(0, -0.1f, 0.3f), Quaternion.identity);
+    }
+
+    private void MakeBoard(ShapeSetData shapeSetData, Vector3 position, Quaternion rotation)
+    {
+        if(toyBucket != null && toyBucket.Count > 0)
+        {
+            foreach (var toy in toyBucket)
+            {
+                Destroy(toy.gameObject);
+            }
+
+            toyBucket.Clear();
+        }
+        
         var bluePrints = shapeSetData.GetAllShapes();
         int[,,] puzzleShape = bluePrints[0];
         bluePrints.Remove(puzzleShape);
@@ -89,7 +104,8 @@ public class ToyMaker : MonoBehaviour
         
         // create a board
         GameObject absBoard = new GameObject();
-        absBoard.transform.position = Camera.main.transform.position + new Vector3(0, -0.1f, 0.3f);
+        absBoard.transform.position = position;
+        absBoard.transform.rotation = rotation;
         absBoard.name = "Board";
         GridSystem.Snap(absBoard.transform);
         toyBucket.Add(absBoard);
