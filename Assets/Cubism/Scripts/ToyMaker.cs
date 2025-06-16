@@ -23,7 +23,7 @@ public class ToyMaker : MonoBehaviour
     public Piece piecePrefab;
     [HideInInspector] public GameObject puzzle;
     public ShapeSetData bluePrintsData;
-    public int[,,] Answer;
+    public Int3DArray Answer;
 
 
     public ShapeSetData data;
@@ -82,12 +82,31 @@ public class ToyMaker : MonoBehaviour
         bluePrints.Remove(puzzleShape);
         
         // create an answer array
-        Answer = (int[,,])puzzleShape.Clone();
-        for (int x = 0; x < Answer.GetLength(0); x++)
+        //Answer = (int[,,])puzzleShape.Clone();
+        // for (int x = 0; x < Answer.GetLength(0); x++)
+        // {
+        //     for (int y = 0; y < Answer.GetLength(1); y++)
+        //     {
+        //         for (int z = 0; z < Answer.GetLength(2); z++)
+        //         {
+        //             switch (Answer[x, y, z])
+        //             {
+        //                 case 1:
+        //                     Answer[x, y, z] = 0;
+        //                     break;
+        //                 case 0:
+        //                     Answer[x, y, z] = -1;
+        //                     break;
+        //             }
+        //         }
+        //     }
+        // }
+        Answer = Int3DArray.FromArray(puzzleShape);
+        for (int x = 0; x < Answer.sizeX; x++)
         {
-            for (int y = 0; y < Answer.GetLength(1); y++)
+            for (int y = 0; y < Answer.sizeY; y++)
             {
-                for (int z = 0; z < Answer.GetLength(2); z++)
+                for (int z = 0; z < Answer.sizeZ; z++)
                 {
                     switch (Answer[x, y, z])
                     {

@@ -22,7 +22,7 @@ public class Piece : MonoBehaviour
     // block variables
     public GameObject blockPrefab;
     public List<GameObject> blocks = new List<GameObject>();
-    private int[,,] snapshot;
+    public Int3DArray snapshot;
 
     private void Awake()
     {
@@ -90,13 +90,11 @@ public class Piece : MonoBehaviour
         outlinable.enabled = true;
         rigidbody.isKinematic = false;
         
-        snapshot = (int[,,])ToyMaker.instance.Answer.Clone();
+        //snapshot = (int[,,])ToyMaker.instance.Answer.Clone();
+        snapshot = ToyMaker.instance.Answer.Clone();
         
         // separate blocks from puzzle
-        if (TryUpdateSnapshot(0, v => v == 1))
-        {
-            Debug.Log("Piece grabbed, blocks separated from puzzle.");
-        };
+        TryUpdateSnapshot(0, v => v == 1);
     }
 
     private void OnRelease(SelectExitEventArgs args)
@@ -107,16 +105,16 @@ public class Piece : MonoBehaviour
         Vector3 pos = transform.position;
         Quaternion rot = transform.rotation;
         GridSystem.RelativeSnap(transform, ToyMaker.instance.puzzle.transform);
-        
-        if (TryMerge())
+
+        TryMerge(out bool isUpdateSuccess, out bool isInArea);
+        if (isUpdateSuccess)
         {
             // apply the changes
             ToyMaker.instance.Answer = snapshot;
-            rigidbody.isKinematic = true;
-            
+                
             // check puzzle completion
             bool isSolved = true;
-            foreach (int i in snapshot)
+            foreach (int i in snapshot.ToArray())
             {
                 if (i == 0)
                 {
@@ -129,29 +127,37 @@ public class Piece : MonoBehaviour
                 ToyMaker.instance.Clear();
             }
         }
+        
+        if (isInArea)
+        {
+            rigidbody.isKinematic = true;
+            transform.parent = ToyMaker.instance.puzzle.transform;
+        }
         else
         {
-            // revert to original position and rotation
-            transform.position = pos;
-            transform.rotation = rot;
+            // revert snap
+            // transform.position = pos;
+            // transform.rotation = rot;
             transform.parent = boardTransform;
             rigidbody.isKinematic = false;
+            Debug.Log("Reverted");
         }
     }
 
-    private bool TryMerge()
+    private void TryMerge(out bool isUpdateSuccess, out bool isInArea)
     {
-        bool isUpdateSuccess = TryUpdateSnapshot(1, v => v == 0, i => i == 1, out bool isInArea);
-        return isUpdateSuccess && isInArea;
+        isUpdateSuccess = TryUpdateSnapshot(1, v => v == 0, i => i == 1, out isInArea);
+        Debug.Log($"update success: {isUpdateSuccess}, in area: {isInArea}");
     }
 
     private bool TryUpdateSnapshot(int valueToSet, Func<int, bool> targetCondition)
     {
-        return TryUpdateSnapshot(valueToSet, targetCondition, null, out bool isInPuzzle);
+        return TryUpdateSnapshot(valueToSet, targetCondition, null, out bool isInArea);
     }
     
     private bool TryUpdateSnapshot(int valueToSet, Func<int,bool> targetCondition, Func<int, bool> conflictCheck, out bool isInArea)
     {
+        Debug.Log("<color=red>TryUpdateSnapshot</color>");
         isInArea = false;
         foreach (var block in blocks)
         {
@@ -166,15 +172,19 @@ public class Piece : MonoBehaviour
                 {
                     snapshot[x, y, z] = valueToSet;
                     isInArea = true;
+                    
+                    Debug.Log($"{x}, {y}, {z} = {valueToSet}");
                 }
                 else if (conflictCheck != null && conflictCheck(snapshot[x, y, z]))
                 {
+                    Debug.Log($"conflict at {x}, {y}, {z} with value {snapshot[x, y, z]}");
                     return false;
                 }
             }
             catch (Exception e)
             {
                 // out of index
+                Debug.Log($"Out of index at {x}, {y}, {z}.");
             }
         }
 
