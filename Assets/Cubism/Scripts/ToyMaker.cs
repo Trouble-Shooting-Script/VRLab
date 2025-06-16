@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using EPOOutline;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -18,10 +19,10 @@ public class ToyMaker : MonoBehaviour
         new Color(1.000f, 0.764f, 0.741f, 1.0f)
     };
     public List<GameObject> toyBucket = new();
-    public Sample sample;
-    public Piece piece;
+    public Sample samplePrefab;
+    public Piece piecePrefab;
     [HideInInspector] public GameObject puzzle;
-    public ShapeSetData bluePrints;
+    public ShapeSetData bluePrintsData;
     public int[,,] Answer;
 
     private void Awake()
@@ -40,7 +41,7 @@ public class ToyMaker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            MakeBoard(bluePrints.GetAllShapes());
+            MakeBoard(bluePrintsData.GetAllShapes());
         }
 
         if (Input.GetKeyDown(KeyCode.Backspace))
@@ -59,20 +60,11 @@ public class ToyMaker : MonoBehaviour
 
     private void MakeBoard(List<int[,,]> bluePrints)
     {
-        // create a board
-        GameObject absBoard = new GameObject();
-        absBoard.transform.position = Camera.main.transform.position + new Vector3(0, -0.1f, 0.3f);
-        absBoard.name = "Board";
-        GridSystem.Snap(absBoard.transform);
-        toyBucket.Add(absBoard);
-
-        // create a puzzle
-        Sample sam = Instantiate(sample, absBoard.transform);
-        puzzle = sam.MakeModel(bluePrints[0]);
-        puzzle.name = "Puzzle";
-
+        int[,,] puzzleShape = bluePrints[0];
+        bluePrints.Remove(puzzleShape);
+        
         // create an answer array
-        Answer = (int[,,])bluePrints[0].Clone();
+        Answer = (int[,,])puzzleShape.Clone();
         for (int x = 0; x < Answer.GetLength(0); x++)
         {
             for (int y = 0; y < Answer.GetLength(1); y++)
@@ -91,18 +83,37 @@ public class ToyMaker : MonoBehaviour
                 }
             }
         }
+        
+        // create a board
+        GameObject absBoard = new GameObject();
+        absBoard.transform.position = Camera.main.transform.position + new Vector3(0, -0.1f, 0.3f);
+        absBoard.name = "Board";
+        GridSystem.Snap(absBoard.transform);
+        toyBucket.Add(absBoard);
 
+        // create a puzzle
+        Sample sam = Instantiate(samplePrefab, absBoard.transform);
+        puzzle = sam.MakeModel(puzzleShape);
+        puzzle.name = "Puzzle";
 
         // create pieces
         Color[] shuffledColor = RandomUtil.GetShuffled(colors);
-        for (int i = 1; i < bluePrints.Count; i++)
+        var shuffledBluePrints = RandomUtil.GetShuffled(bluePrints.ToArray());
+        
+        Vector3 distance = absBoard.transform.right * 0.3f;
+        float degree = 360f / shuffledBluePrints.Length;
+        
+        for (int i = 0; i < shuffledBluePrints.Length; i++)
         {
-            Piece piece = Instantiate(this.piece, absBoard.transform);
-            piece.transform.localPosition += new Vector3((bluePrints[0].GetLength(0) + 3) * GridSystem.CELL_SIZE,
-                0.15f * (i - 1), 0);
-            piece.MakeModel(bluePrints[i], shuffledColor[i % shuffledColor.Length]);
-            piece.name = "Piece_" + i;
+            Piece piece = Instantiate(piecePrefab, absBoard.transform);
             toyBucket.Add(piece.gameObject);
+            
+            piece.transform.localPosition = Quaternion.AngleAxis(degree * i, absBoard.transform.forward) * distance;
+            piece.MakeModel(shuffledBluePrints[i], shuffledColor[i % shuffledColor.Length]);
+            piece.name = $"Piece_{i}";
+            piece.rigidbody.AddTorque(
+                new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f)) * 10f,
+                ForceMode.Impulse);
         }
     }
 
