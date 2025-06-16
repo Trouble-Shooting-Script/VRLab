@@ -5,15 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/01.Scene/XRI Sample Scene/XRI_Examples_Main.unity
-    guid: ba755f5a181505a4799b21685d4c7576
   - enabled: 1
-    path: Assets/01.Scene/MR Samples/HandGestures.unity
-    guid: cd792f2302b8b6f4c9f264e2a4503e15
-  - enabled: 0
-    path: Assets/01.Scene/MR Samples/HandsDemoScene.unity
-    guid: 3ff35cecbcc52cc42945cf531638a60a
+    path: Assets/01.Scene/MR Samples/HandVisualizer.unity
+    guid: ab7acf0d9677fbe4db51bc36647d4fcb
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: efb7b87eb8ecd9d46b3a0351222f323f, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 522d3b06c4d14754c96a379c1de0b4f5, type: 2}
