@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridSystem : MonoBehaviour
+public class GridSystem
 {
     public const float CELL_SIZE = 0.03125f;
 
@@ -29,7 +29,7 @@ public class GridSystem : MonoBehaviour
         euler.y = Mathf.Round(euler.y / 90f) * 90f;
         euler.z = Mathf.Round(euler.z / 90f) * 90f;
         Quaternion snappedRot = Quaternion.Euler(euler);
-        target.localRotation = relativeTo.rotation * snappedRot;
+        target.rotation = relativeTo.rotation * snappedRot;
         
         Vector3 prePos = Quaternion.Inverse(relativeTo.rotation) * (target.position - relativeTo.position);
         Vector3 position = prePos;

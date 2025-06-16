@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Searcher;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -13,9 +14,8 @@ public class Piece : MonoBehaviour
     // interactable variables
     public XRBaseInteractable interactable;
     public new Rigidbody rigidbody;
-    public Vector3 startPos;
-    public Quaternion startRot;
-    public Transform startTransform;
+    
+    public Transform boardTransform;
     
     // block variables
     public GameObject blockPrefab;
@@ -31,7 +31,12 @@ public class Piece : MonoBehaviour
         
         rigidbody = GetComponent<Rigidbody>();
     }
-    
+
+    private void Start()
+    {
+        boardTransform = transform.parent;
+    }
+
     public GameObject MakeModel(int[,,] bluePrint, Color color)
     {
         for (int x = 0; x < bluePrint.GetLength(0); x++)
@@ -66,9 +71,6 @@ public class Piece : MonoBehaviour
 
     private void OnGrab(SelectEnterEventArgs args)
     {
-        startPos = transform.position;
-        startRot = transform.rotation;
-        startTransform = transform.parent;
         snapshot = (int[,,])ToyMaker.instance.Answer.Clone();
         
         // separate blocks from puzzle
@@ -77,17 +79,18 @@ public class Piece : MonoBehaviour
 
     private void OnRelease(SelectExitEventArgs args)
     {
-        GridSystem.RelativeSnap(this.transform, ToyMaker.instance.puzzle.transform);
-        if (TryMerge() == false)
+        // snap to grid
+        Vector3 pos = transform.position;
+        Quaternion rot = transform.rotation;
+        GridSystem.RelativeSnap(transform, ToyMaker.instance.puzzle.transform);
+        
+        if (TryMerge())
         {
-            transform.position = startPos;
-            transform.rotation = startRot;
-            transform.parent = startTransform;
-        }
-        else
-        {
+            // apply the changes
             ToyMaker.instance.Answer = snapshot;
+            rigidbody.isKinematic = true;
             
+            // check puzzle completion
             bool isSolved = true;
             foreach (int i in snapshot)
             {
@@ -97,21 +100,36 @@ public class Piece : MonoBehaviour
                     break;
                 }
             }
-
             if (isSolved)
             {
                 ToyMaker.instance.Clear();
             }
         }
+        else
+        {
+            // revert to original position and rotation
+            transform.position = pos;
+            transform.rotation = rot;
+            transform.parent = boardTransform;
+            rigidbody.isKinematic = false;
+        }
     }
 
     private bool TryMerge()
     {
-        return TryUpdateSnapshot(1, v => v == 0);
+        bool isUpdateSuccess = TryUpdateSnapshot(1, v => v == 0, i => i == 1, out bool isInArea);
+        Debug.Log($"{isUpdateSuccess} / {isInArea}");
+        return isUpdateSuccess && isInArea;
+    }
+
+    private void TryUpdateSnapshot(int valueToSet, Func<int, bool> targetCondition)
+    {
+        TryUpdateSnapshot(valueToSet, targetCondition, null, out bool isInPuzzle);
     }
     
-    private bool TryUpdateSnapshot(int valueToSet, Func<int,bool> targetCondition, Func<int, bool> conflictCheck = null)
+    private bool TryUpdateSnapshot(int valueToSet, Func<int,bool> targetCondition, Func<int, bool> conflictCheck, out bool isInArea)
     {
+        isInArea = false;
         foreach (var block in blocks)
         {
             Vector3 coord = ToyMaker.instance.puzzle.transform.InverseTransformPoint(block.transform.position) / GridSystem.CELL_SIZE;
@@ -124,7 +142,7 @@ public class Piece : MonoBehaviour
                 if(targetCondition(snapshot[x, y, z]))
                 {
                     snapshot[x, y, z] = valueToSet;
-                    Debug.Log($"{x}, {y}, {z} set to {valueToSet} in snapshot");
+                    isInArea = true;
                 }
                 else if (conflictCheck != null && conflictCheck(snapshot[x, y, z]))
                 {
@@ -152,15 +170,5 @@ public class Piece : MonoBehaviour
         XRInteractionManager manager = interactable.interactionManager;
         interactable.interactionManager = null;
         interactable.interactionManager = manager;
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        Debug.Log("collision enter");
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("trigger enter");
     }
 }
