@@ -1,42 +1,38 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class FigureGrab : MonoBehaviour
 {
-    private XRBaseInteractable mGrabInteractable;
+    private XRGrabInteractable mGrabInteractable;
     public Vector3 smallScale;
-    public Vector3 largeScale;
 
     private void OnEnable()
     {
-        mGrabInteractable = GetComponent<XRBaseInteractable>();
+        mGrabInteractable = GetComponent<XRGrabInteractable>();
         mGrabInteractable.selectEntered.AddListener(ScaleSet);
-        mGrabInteractable.selectExited.AddListener(ScaleReset);
     }
 
     private void OnDisable()
     {
         mGrabInteractable.selectEntered.RemoveListener(ScaleSet);
-        mGrabInteractable.selectExited.RemoveListener(ScaleReset);
     }
+
+    private bool mCanChangeScale = false;
+    private float mScale;
 
     private void ScaleSet(SelectEnterEventArgs args)
     {
-        Debug.Log("ScaleSet 호출됨");
-        Debug.Log(args.interactableObject);
-        Debug.Log(args.interactorObject);
+
         args.interactableObject.transform.localScale = smallScale;
-    }
-    private void ScaleReset(SelectExitEventArgs args)
-    {
-        Debug.Log("ScaleReset 호출됨");
-        Debug.Log(args.interactableObject);
-        Debug.Log(args.interactorObject);
-        args.interactableObject.transform.localScale = largeScale;
+        if (args.interactorObject.handedness == InteractorHandedness.None)
+        {
+            mGrabInteractable.selectMode = InteractableSelectMode.Single;
+        }
+        else
+        {
+            mGrabInteractable.selectMode = InteractableSelectMode.Multiple;
+        }
     }
 }
