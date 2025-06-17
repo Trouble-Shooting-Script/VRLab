@@ -11,6 +11,7 @@ public class FigureGrab : MonoBehaviour
     private void OnEnable()
     {
         mGrabInteractable = GetComponent<XRGrabInteractable>();
+        mGrabInteractable.trackScale = true;
         mGrabInteractable.selectEntered.AddListener(ScaleSet);
     }
 
@@ -18,14 +19,12 @@ public class FigureGrab : MonoBehaviour
     {
         mGrabInteractable.selectEntered.RemoveListener(ScaleSet);
     }
-
-    private bool mCanChangeScale = false;
+    
     private float mScale;
 
     private void ScaleSet(SelectEnterEventArgs args)
     {
-
-        args.interactableObject.transform.localScale = smallScale;
+        //args.interactableObject.transform.localScale = smallScale;
         if (args.interactorObject.handedness == InteractorHandedness.None)
         {
             mGrabInteractable.selectMode = InteractableSelectMode.Single;
