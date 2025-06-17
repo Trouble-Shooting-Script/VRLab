@@ -87,11 +87,7 @@ public class Piece : MonoBehaviour
 
     private void OnGrab(SelectEnterEventArgs args)
     {
-        outlinable.enabled = true;
         rigidbody.isKinematic = false;
-        
-        //snapshot = (int[,,])ToyMaker.instance.Answer.Clone();
-        snapshot = ToyMaker.instance.Answer.Clone();
         
         // separate blocks from puzzle
         TryUpdateSnapshot(0, v => v == 1);
@@ -99,11 +95,11 @@ public class Piece : MonoBehaviour
 
     private void OnRelease(SelectExitEventArgs args)
     {
-        outlinable.enabled = false;
-        
-        // snap to grid
+        // make a snapshot
+        snapshot = ToyMaker.instance.Answer.Clone();
         Vector3 pos = transform.position;
         Quaternion rot = transform.rotation;
+        
         GridSystem.RelativeSnap(transform, ToyMaker.instance.puzzle.transform);
 
         TryMerge(out bool isUpdateSuccess, out bool isInArea);
@@ -111,6 +107,11 @@ public class Piece : MonoBehaviour
         {
             // apply the changes
             ToyMaker.instance.Answer = snapshot;
+            if (isInArea)
+            {
+                rigidbody.isKinematic = true;
+                transform.parent = ToyMaker.instance.puzzle.transform;
+            }
                 
             // check puzzle completion
             bool isSolved = true;
@@ -127,17 +128,13 @@ public class Piece : MonoBehaviour
                 ToyMaker.instance.Clear();
             }
         }
-        
-        if (isInArea)
-        {
-            rigidbody.isKinematic = true;
-            transform.parent = ToyMaker.instance.puzzle.transform;
-        }
-        else
+
+
+        if (isInArea == false || isUpdateSuccess == false)
         {
             // revert snap
-            // transform.position = pos;
-            // transform.rotation = rot;
+            transform.position = pos;
+            transform.rotation = rot;
             transform.parent = boardTransform;
             rigidbody.isKinematic = false;
             Debug.Log("Reverted");
