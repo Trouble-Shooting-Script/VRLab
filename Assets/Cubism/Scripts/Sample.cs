@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Sample : MonoBehaviour
 {
-    public Transform attach;
+    public Transform center;
     public SampleBlock[,,] Blueprint;
     public SampleBlock blockPrefab;
     
@@ -43,7 +43,7 @@ public class Sample : MonoBehaviour
     private void AdjustCenterPosition(int x, int y, int z)
     {
         Vector3 newCenter = (new Vector3(x, y, z) - Vector3.one) * (GridSystem.CELL_SIZE * 0.5f);
-        attach.localPosition = newCenter;
+        center.localPosition = newCenter;
     }
 
     private void UpdateBound(int x, int y, int z)
