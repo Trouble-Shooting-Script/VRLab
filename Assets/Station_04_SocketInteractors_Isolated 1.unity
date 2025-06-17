@@ -10490,7 +10490,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smallScale: {x: 0.1, y: 0.1, z: 0.1}
-  largeScale: {x: 0.3, y: 0.3, z: 0.3}
 --- !u!114 &508294240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10552,6 +10551,10 @@ PrefabInstance:
     - target: {fileID: 1098443921659981128, guid: 67e22991438b4ec4c8d45d878d9aa5ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915517704190508204, guid: 67e22991438b4ec4c8d45d878d9aa5ae, type: 3}
+      propertyPath: m_SocketScaleMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7480167620841730254, guid: 67e22991438b4ec4c8d45d878d9aa5ae, type: 3}
       propertyPath: m_Name
@@ -16548,6 +16551,7 @@ GameObject:
   - component: {fileID: 4071241781244208286}
   - component: {fileID: 7510409243610782349}
   - component: {fileID: 508294240}
+  - component: {fileID: 8234269273680388386}
   m_Layer: 0
   m_Name: DeadPool
   m_TagString: Untagged
@@ -16847,6 +16851,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8234269273680388386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439501530350180409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PermittedDisplacementAxes: -1
+  m_ConstrainedAxisDisplacementMode: 1
+  m_TwoHandedRotationMode: 1
+  m_AllowOneHandedScaling: 1
+  m_AllowTwoHandedScaling: 1
+  m_OneHandedScaleSpeed: 0.5
+  m_ThresholdMoveRatioForScale: 0.05
+  m_ClampScaling: 1
+  m_MinimumScaleRatio: 0.25
+  m_MaximumScaleRatio: 2
+  m_ScaleMultiplier: 0.25
 --- !u!1001 &8986566791816603372
 PrefabInstance:
   m_ObjectHideFlags: 0
