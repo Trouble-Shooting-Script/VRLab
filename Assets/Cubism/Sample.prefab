@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690007849a6dacd41b8b94051abb779b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attach: {fileID: 2706708384747587405}
+  center: {fileID: 2706708384747587405}
   blockPrefab: {fileID: 440311500160966268, guid: d65150bbbab096645a54b2e0c1a81256, type: 3}
 --- !u!54 &-1279003052754099202
 Rigidbody:
