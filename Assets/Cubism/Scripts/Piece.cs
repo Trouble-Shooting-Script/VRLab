@@ -12,6 +12,25 @@ public class Piece : MonoBehaviour
     private static readonly int EMISSION_COLOR = Shader.PropertyToID("_EmissionColor");
     private static readonly int COLOR = Shader.PropertyToID("_AlbedoColor");
 
+    private static Piece s_hovered;
+
+    private static Piece Hovered
+    {
+        get => s_hovered;
+        set
+        {
+            if (s_hovered != null)
+            {
+                s_hovered.outlinable.enabled = false;
+            }
+            s_hovered = value;
+            if (s_hovered != null)
+            {
+                s_hovered.outlinable.enabled = true;
+            }
+        }
+    }
+
     // interactable variables
     public XRBaseInteractable interactable;
     public new Rigidbody rigidbody;
@@ -30,15 +49,15 @@ public class Piece : MonoBehaviour
         outlinable = GetComponent<Outlinable>();
         interactable = GetComponent<XRBaseInteractable>();
 
-        interactable.hoverEntered.AddListener((arg0 =>
+        interactable.hoverEntered.AddListener((args =>
         {
-            outlinable.enabled = true;
+            Hovered = this;
         }));
-        interactable.hoverExited.AddListener((arg0 =>
+        interactable.hoverExited.AddListener((args =>
         {
             if (interactable.isSelected == false)
             {
-                outlinable.enabled = false;
+                Hovered = null;
             }
         }));
         interactable.selectEntered.AddListener(OnGrab);
@@ -88,9 +107,7 @@ public class Piece : MonoBehaviour
     private void OnGrab(SelectEnterEventArgs args)
     {
         rigidbody.isKinematic = false;
-        
-        // separate blocks from puzzle
-        TryUpdateSnapshot(0, v => v == 1);
+        SeparateFromPuzzle();
     }
 
     private void OnRelease(SelectExitEventArgs args)
@@ -105,13 +122,14 @@ public class Piece : MonoBehaviour
         TryMerge(out bool isUpdateSuccess, out bool isInArea);
         if (isUpdateSuccess)
         {
-            // apply the changes
-            ToyMaker.instance.Answer = snapshot;
             if (isInArea)
             {
                 rigidbody.isKinematic = true;
                 transform.parent = ToyMaker.instance.puzzle.transform;
             }
+            
+            // apply the changes
+            ToyMaker.instance.Answer = snapshot;
                 
             // check puzzle completion
             bool isSolved = true;
@@ -141,18 +159,23 @@ public class Piece : MonoBehaviour
         }
     }
 
+    private void SeparateFromPuzzle()
+    {
+        TryUpdateSnapshot(ToyMaker.instance.Answer, 0, v => v == 1);
+    }
+
     private void TryMerge(out bool isUpdateSuccess, out bool isInArea)
     {
-        isUpdateSuccess = TryUpdateSnapshot(1, v => v == 0, i => i == 1, out isInArea);
+        isUpdateSuccess = TryUpdateSnapshot(snapshot, 1, v => v == 0, i => i == 1, out isInArea);
         Debug.Log($"update success: {isUpdateSuccess}, in area: {isInArea}");
     }
 
-    private bool TryUpdateSnapshot(int valueToSet, Func<int, bool> targetCondition)
+    private bool TryUpdateSnapshot(Int3DArray arrayToUpdate, int valueToSet, Func<int, bool> targetCondition)
     {
-        return TryUpdateSnapshot(valueToSet, targetCondition, null, out bool isInArea);
+        return TryUpdateSnapshot(arrayToUpdate, valueToSet, targetCondition, null, out bool isInArea);
     }
     
-    private bool TryUpdateSnapshot(int valueToSet, Func<int,bool> targetCondition, Func<int, bool> conflictCheck, out bool isInArea)
+    private bool TryUpdateSnapshot(Int3DArray arrayToUpdate, int valueToSet, Func<int,bool> targetCondition, Func<int, bool> conflictCheck, out bool isInArea)
     {
         Debug.Log("<color=red>TryUpdateSnapshot</color>");
         isInArea = false;
@@ -165,16 +188,16 @@ public class Piece : MonoBehaviour
 
             try
             {
-                if(targetCondition(snapshot[x, y, z]))
+                if(targetCondition(arrayToUpdate[x, y, z]))
                 {
-                    snapshot[x, y, z] = valueToSet;
+                    arrayToUpdate[x, y, z] = valueToSet;
                     isInArea = true;
                     
                     Debug.Log($"{x}, {y}, {z} = {valueToSet}");
                 }
-                else if (conflictCheck != null && conflictCheck(snapshot[x, y, z]))
+                else if (conflictCheck != null && conflictCheck(arrayToUpdate[x, y, z]))
                 {
-                    Debug.Log($"conflict at {x}, {y}, {z} with value {snapshot[x, y, z]}");
+                    Debug.Log($"conflict at {x}, {y}, {z} with value {arrayToUpdate[x, y, z]}");
                     return false;
                 }
             }

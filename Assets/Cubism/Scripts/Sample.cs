@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Sample : MonoBehaviour
 {
+    public Transform attach;
     public SampleBlock[,,] Blueprint;
     public SampleBlock blockPrefab;
     
@@ -33,8 +35,15 @@ public class Sample : MonoBehaviour
         }
         CleanOutline();
         UpdateBound(xSize, ySize, zSize);
+        AdjustCenterPosition(xSize, ySize, zSize);
 
         return gameObject;
+    }
+
+    private void AdjustCenterPosition(int x, int y, int z)
+    {
+        Vector3 newCenter = (new Vector3(x, y, z) - Vector3.one) * (GridSystem.CELL_SIZE * 0.5f);
+        attach.localPosition = newCenter;
     }
 
     private void UpdateBound(int x, int y, int z)
