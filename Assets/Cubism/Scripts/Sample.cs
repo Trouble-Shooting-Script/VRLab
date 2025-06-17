@@ -32,11 +32,19 @@ public class Sample : MonoBehaviour
             }
         }
         CleanOutline();
+        UpdateBound(xSize, ySize, zSize);
 
         return gameObject;
     }
+
+    private void UpdateBound(int x, int y, int z)
+    {
+        var col = GetComponent<BoxCollider>();
+        col.size = new Vector3(x, y, z) * GridSystem.CELL_SIZE;
+        col.center = col.size * 0.5f - Vector3.one * (GridSystem.CELL_SIZE * 0.5f);
+    }
     
-    public void CleanOutline()
+    private void CleanOutline()
     {
         for (int x = 0; x < Blueprint.GetLength(0); x++)
         {
