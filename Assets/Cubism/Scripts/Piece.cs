@@ -15,7 +15,6 @@ public class Piece : MonoBehaviour
     private static Piece s_hovered;
     private static Piece Hovered
     {
-        get => s_hovered;
         set
         {
             if (s_hovered != null)
@@ -210,7 +209,7 @@ public class Piece : MonoBehaviour
         return true;
     }
 
-    public void UpdateCollider()
+    private void UpdateCollider()
     {
         foreach (Transform child in transform)
         {
