@@ -15,7 +15,7 @@ MonoBehaviour:
   title: Paint in 3D/Splat
   target: {fileID: 4800000, guid: 6bc821d6ab0c1464eafa9ea94effcfff, type: 3}
   variantHash: 850841361
-  projectHash: 1168957590
+  projectHash: -14127197
   variants:
   - Pipe: 0
     Code: "//<HASH>-974245685</HASH>\n////////////////////////////////////////\n//
