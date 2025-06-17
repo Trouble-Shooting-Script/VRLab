@@ -1772,9 +1772,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623c5848030e9674893bb3bb376834b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ProjectilePrefab: {fileID: 3741748007055316339, guid: cdb0516cc526d894e92accaa1a256fb2, type: 3}
+  m_ProjectilePrefab: {fileID: 7501243818469369601, guid: b8a23007e59558f4c8c208e4f0acefae, type: 3}
   m_StartPoint: {fileID: 2166472182848781789}
-  m_LaunchSpeed: 1
+  m_LaunchSpeed: 500
 --- !u!114 &7838871483051514312
 MonoBehaviour:
   m_ObjectHideFlags: 0
