@@ -13,7 +13,6 @@ public class Piece : MonoBehaviour
     private static readonly int COLOR = Shader.PropertyToID("_AlbedoColor");
 
     private static Piece s_hovered;
-
     private static Piece Hovered
     {
         get => s_hovered;
