@@ -24,10 +24,10 @@ public class FigureGrab : MonoBehaviour
 
     private void ScaleSet(SelectEnterEventArgs args)
     {
-        //args.interactableObject.transform.localScale = smallScale;
         if (args.interactorObject.handedness == InteractorHandedness.None)
         {
             mGrabInteractable.selectMode = InteractableSelectMode.Single;
+            mGrabInteractable.SetTargetLocalScale(smallScale);
         }
         else
         {
