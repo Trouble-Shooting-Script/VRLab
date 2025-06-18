@@ -6,9 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/01.Scene/XRI Sample Scene/XRI_Examples_Main.unity
-    guid: ba755f5a181505a4799b21685d4c7576
+    path: Assets/01.Scene/MR Samples/HandVisualizer.unity
+    guid: ab7acf0d9677fbe4db51bc36647d4fcb
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: efb7b87eb8ecd9d46b3a0351222f323f, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 522d3b06c4d14754c96a379c1de0b4f5, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: fba6072275013e6448e381f83d131b7f, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: e60ad326389e9b14e9f7ae2c33703862, type: 2}

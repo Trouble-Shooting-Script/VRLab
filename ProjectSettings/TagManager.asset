@@ -9,6 +9,8 @@ TagManager:
   - Destroyer
   - MiniWorldCamera
   - Water
+  - Cubism_Piece
+  - Cubism_Sample
   layers:
   - Default
   - TransparentFX
