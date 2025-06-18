@@ -12,23 +12,6 @@ public class Piece : MonoBehaviour
     private static readonly int EMISSION_COLOR = Shader.PropertyToID("_EmissionColor");
     private static readonly int COLOR = Shader.PropertyToID("_AlbedoColor");
 
-    private static Piece s_hovered;
-    private static Piece Hovered
-    {
-        set
-        {
-            if (s_hovered != null)
-            {
-                s_hovered.outlinable.enabled = false;
-            }
-            s_hovered = value;
-            if (s_hovered != null)
-            {
-                s_hovered.outlinable.enabled = true;
-            }
-        }
-    }
-
     // interactable variables
     public XRBaseInteractable interactable;
     public new Rigidbody rigidbody;
@@ -46,18 +29,23 @@ public class Piece : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         outlinable = GetComponent<Outlinable>();
         interactable = GetComponent<XRBaseInteractable>();
-
-        interactable.hoverEntered.AddListener((args =>
+        
+        interactable.firstHoverEntered.AddListener((args =>
         {
-            Hovered = this;
+            outlinable.enabled = true;
         }));
-        interactable.hoverExited.AddListener((args =>
+        interactable.lastHoverExited.AddListener((args =>
         {
             if (interactable.isSelected == false)
             {
-                Hovered = null;
+                outlinable.enabled = false;
             }
         }));
+        interactable.selectExited.AddListener((args =>
+        {
+            outlinable.enabled = false;
+        }));
+        
         interactable.selectEntered.AddListener(OnGrab);
         interactable.selectExited.AddListener(OnRelease);
     }
@@ -144,8 +132,7 @@ public class Piece : MonoBehaviour
                 ToyMaker.instance.Clear();
             }
         }
-
-
+        
         if (isInArea == false || isUpdateSuccess == false)
         {
             // revert snap
