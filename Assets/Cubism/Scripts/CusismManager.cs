@@ -43,7 +43,7 @@ public class CusismManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            MakeBoard(data, Camera.main.transform.position + new Vector3(0, -0.1f, 0.4f), Quaternion.identity);
+            MakeBoard(data, Camera.main.transform.position + new Vector3(0, -0.1f, 0.6f), Quaternion.identity);
         }
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
@@ -71,7 +71,7 @@ public class CusismManager : MonoBehaviour
 
     public void MakeBoard(ShapeSetData shapeSetData)
     {
-        MakeBoard(shapeSetData, Camera.main.transform.position + new Vector3(0, -0.1f, 0.3f), Quaternion.identity);
+        MakeBoard(shapeSetData, Camera.main.transform.position + new Vector3(0, -0.1f, 0.45f), Quaternion.identity);
     }
 
     private void MakeBoard(ShapeSetData shapeSetData, Vector3 position, Quaternion rotation)
