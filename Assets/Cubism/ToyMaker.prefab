@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 622992340802307439}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0049999994, y: 0.005000001, z: -0.005}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49,4 +49,9 @@ MonoBehaviour:
   piecePrefab: {fileID: 224406836647188174, guid: 8d1fe4cb6430326429be8ce0451196a7, type: 3}
   puzzle: {fileID: 0}
   bluePrintsData: {fileID: 11400000, guid: a7d61907b8a4d1d4a9c53ea286acd60e, type: 2}
+  Answer:
+    sizeX: 0
+    sizeY: 0
+    sizeZ: 0
+    data: 
   data: {fileID: 11400000, guid: cd166c588d11baa498a156c42892efda, type: 2}
