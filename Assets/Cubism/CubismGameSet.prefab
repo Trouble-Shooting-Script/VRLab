@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2973540710393380923}
   m_Layer: 0
-  m_Name: CubismSet
+  m_Name: CubismGameSet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,6 +153,58 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2011114244107413494, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1528214771667644011}
+    - target: {fileID: 2011114244107413494, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011114244107413494, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CusismManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2153859616768703234, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1528214771667644011}
+    - target: {fileID: 2153859616768703234, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 2153859616768703234, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CusismManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097265424411178928, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1528214771667644011}
+    - target: {fileID: 3097265424411178928, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097265424411178928, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CusismManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272026148927131841, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273874893732984339, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1528214771667644011}
+    - target: {fileID: 4273874893732984339, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273874893732984339, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CusismManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4656931092945320573, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
       propertyPath: m_Size
       value: 1
@@ -181,6 +233,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6104388164936074813, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1528214771667644011}
+    - target: {fileID: 6104388164936074813, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104388164936074813, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CusismManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6675192302797757286, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -204,6 +268,18 @@ PrefabInstance:
     - target: {fileID: 6675192302797757286, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712188195514533445, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1528214771667644011}
+    - target: {fileID: 7712188195514533445, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MakeBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712188195514533445, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CusismManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7992207006410019273, guid: 6c4277fc0e1834d48aa40008f2bdc31b, type: 3}
       propertyPath: m_SizeDelta.y
@@ -365,3 +441,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4792854980246937251, guid: dc816a9e7ca89a74cbb9759f9033d9b7, type: 3}
   m_PrefabInstance: {fileID: 5343347915747791289}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1528214771667644011 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6850588159419989970, guid: dc816a9e7ca89a74cbb9759f9033d9b7, type: 3}
+  m_PrefabInstance: {fileID: 5343347915747791289}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e06fd1b87588642948853c1fdd1ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

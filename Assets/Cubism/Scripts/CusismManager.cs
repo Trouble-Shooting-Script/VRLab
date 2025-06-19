@@ -22,14 +22,14 @@ public class CusismManager : MonoBehaviour
     public Sample samplePrefab;
     public Piece piecePrefab;
     [HideInInspector] public GameObject puzzle;
-    public ShapeSetData bluePrintsData;
+    public ShapeSetData data;
     public Int3DArray Answer;
 
+    [Header("Whole Game Variables")]
     public List<ShapeSetData> clearPuzzleData = new List<ShapeSetData>();
     public ShapeSetData currentPuzzleData;
     public int prizeCoin = 10;
 
-    public ShapeSetData data;
 
     private void Awake()
     {
