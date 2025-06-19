@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     {
         if (currentGame != null)
         {
+            Debug.Log("Destroying current game: " + currentGame.name);
             Destroy(currentGame);
         }
         currentGame = Instantiate(gameSet);

@@ -26,7 +26,7 @@ public class CusismManager : MonoBehaviour
     public Int3DArray Answer;
 
     [Header("Whole Game Variables")]
-    public List<ShapeSetData> clearPuzzleData = new List<ShapeSetData>();
+    public static List<ShapeSetData> clearPuzzleData = new List<ShapeSetData>();
     public ShapeSetData currentPuzzleData;
     public int prizeCoin = 10;
 
@@ -37,29 +37,35 @@ public class CusismManager : MonoBehaviour
         {
             instance = this;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            MakeBoard(data, Camera.main.transform.position + new Vector3(0, -0.1f, 0.3f), Quaternion.identity);
+            MakeBoard(data, Camera.main.transform.position + new Vector3(0, -0.1f, 0.4f), Quaternion.identity);
         }
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            if (toyBucket != null && toyBucket.Count > 0)
-            {
-                foreach (var toy in toyBucket)
-                {
-                    Destroy(toy.gameObject);
-                }
+            
+        }
+    }
 
-                toyBucket.Clear();
+    private void OnDestroy()
+    {
+        DestroyAll();
+    }
+
+    private void DestroyAll()
+    {
+        if (toyBucket != null && toyBucket.Count > 0)
+        {
+            foreach (var toy in toyBucket)
+            {
+                Destroy(toy.gameObject);
             }
+
+            toyBucket.Clear();
         }
     }
 
@@ -71,15 +77,7 @@ public class CusismManager : MonoBehaviour
     private void MakeBoard(ShapeSetData shapeSetData, Vector3 position, Quaternion rotation)
     {
         currentPuzzleData = shapeSetData;
-        if(toyBucket != null && toyBucket.Count > 0)
-        {
-            foreach (var toy in toyBucket)
-            {
-                Destroy(toy.gameObject);
-            }
-
-            toyBucket.Clear();
-        }
+        DestroyAll();
         
         var bluePrints = shapeSetData.GetAllShapes();
         int[,,] puzzleShape = bluePrints[0];
