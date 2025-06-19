@@ -99,11 +99,11 @@ public class Piece : MonoBehaviour
     private void OnRelease(SelectExitEventArgs args)
     {
         // make a snapshot
-        snapshot = ToyMaker.instance.Answer.Clone();
+        snapshot = CusismManager.instance.Answer.Clone();
         Vector3 pos = transform.position;
         Quaternion rot = transform.rotation;
         
-        GridSystem.RelativeSnap(transform, ToyMaker.instance.puzzle.transform);
+        GridSystem.RelativeSnap(transform, CusismManager.instance.puzzle.transform);
 
         TryMerge(out bool isUpdateSuccess, out bool isInArea);
         if (isUpdateSuccess)
@@ -111,11 +111,11 @@ public class Piece : MonoBehaviour
             if (isInArea)
             {
                 rigidbody.isKinematic = true;
-                transform.parent = ToyMaker.instance.puzzle.transform;
+                transform.parent = CusismManager.instance.puzzle.transform;
             }
             
             // apply the changes
-            ToyMaker.instance.Answer = snapshot;
+            CusismManager.instance.Answer = snapshot;
                 
             // check puzzle completion
             bool isSolved = true;
@@ -129,7 +129,7 @@ public class Piece : MonoBehaviour
             }
             if (isSolved)
             {
-                ToyMaker.instance.Clear();
+                CusismManager.instance.Clear();
             }
         }
         
@@ -146,7 +146,7 @@ public class Piece : MonoBehaviour
 
     private void SeparateFromPuzzle()
     {
-        TryUpdateSnapshot(ToyMaker.instance.Answer, 0, v => v == 1);
+        TryUpdateSnapshot(CusismManager.instance.Answer, 0, v => v == 1);
     }
 
     private void TryMerge(out bool isUpdateSuccess, out bool isInArea)
@@ -166,7 +166,7 @@ public class Piece : MonoBehaviour
         isInArea = false;
         foreach (var block in blocks)
         {
-            Vector3 coord = ToyMaker.instance.puzzle.transform.InverseTransformPoint(block.transform.position) / GridSystem.CELL_SIZE;
+            Vector3 coord = CusismManager.instance.puzzle.transform.InverseTransformPoint(block.transform.position) / GridSystem.CELL_SIZE;
             int x = Mathf.RoundToInt(coord.x);
             int y = Mathf.RoundToInt(coord.y);
             int z = Mathf.RoundToInt(coord.z);

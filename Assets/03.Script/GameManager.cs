@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 
@@ -11,10 +12,33 @@ public class Figure
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     public GameObject currentGame;
+    public TMP_Text coinText;
     public Transform figureSpawnPoint;
-    
-    public int CurrentCoin { get; set; } = 0;
+
+    private int m_Coin = 0;
+    public int CurrentCoin
+    {
+        get => m_Coin;
+        set
+        {
+            coinText.text = value.ToString();
+            m_Coin = value;
+        }
+    }
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void StartGame(GameObject gameSet)
     {

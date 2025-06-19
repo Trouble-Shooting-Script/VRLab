@@ -5,9 +5,9 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
-public class ToyMaker : MonoBehaviour
+public class CusismManager : MonoBehaviour
 {
-    public static ToyMaker instance;
+    public static CusismManager instance;
     private static Color[] colors =
     {
         new Color(1.000f, 0.595f, 0.541f, 1.0f),
@@ -25,6 +25,9 @@ public class ToyMaker : MonoBehaviour
     public ShapeSetData bluePrintsData;
     public Int3DArray Answer;
 
+    public List<ShapeSetData> clearPuzzleData = new List<ShapeSetData>();
+    public ShapeSetData currentPuzzleData;
+    public int prizeCoin = 10;
 
     public ShapeSetData data;
 
@@ -67,6 +70,7 @@ public class ToyMaker : MonoBehaviour
 
     private void MakeBoard(ShapeSetData shapeSetData, Vector3 position, Quaternion rotation)
     {
+        currentPuzzleData = shapeSetData;
         if(toyBucket != null && toyBucket.Count > 0)
         {
             foreach (var toy in toyBucket)
@@ -138,6 +142,13 @@ public class ToyMaker : MonoBehaviour
 
     public void Clear()
     {
+        if (clearPuzzleData.Contains(currentPuzzleData))
+        {
+            return;
+        }
+        
+        clearPuzzleData.Add(currentPuzzleData);
+        GameManager.instance.CurrentCoin += prizeCoin;
         Debug.Log("아 성공");
     }
 }
