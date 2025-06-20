@@ -121,8 +121,9 @@ public class CusismManager : MonoBehaviour
         Color[] shuffledColor = RandomUtil.GetShuffled(colors);
         var shuffledBluePrints = RandomUtil.GetShuffled(bluePrints.ToArray());
         
-        Vector3 distance = absBoard.transform.right * 0.3f;
-        float degree = 360f / shuffledBluePrints.Length;
+        Vector3 distance = absBoard.transform.right * 0.2f;
+        float degree = 180f / (shuffledBluePrints.Length - 1);
+        Debug.Log($"{shuffledBluePrints.Length} / {degree}");
         
         for (int i = 0; i < shuffledBluePrints.Length; i++)
         {

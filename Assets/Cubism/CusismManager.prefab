@@ -48,10 +48,12 @@ MonoBehaviour:
   samplePrefab: {fileID: 5253864124338152408, guid: 776127ef956ef084090b8d187b5d98b0, type: 3}
   piecePrefab: {fileID: 224406836647188174, guid: 8d1fe4cb6430326429be8ce0451196a7, type: 3}
   puzzle: {fileID: 0}
-  bluePrintsData: {fileID: 11400000, guid: a7d61907b8a4d1d4a9c53ea286acd60e, type: 2}
+  data: {fileID: 11400000, guid: cd166c588d11baa498a156c42892efda, type: 2}
   Answer:
     sizeX: 0
     sizeY: 0
     sizeZ: 0
     data: 
-  data: {fileID: 11400000, guid: cd166c588d11baa498a156c42892efda, type: 2}
+  currentPuzzleData: {fileID: 0}
+  prizeCoin: 10
+  firework: {fileID: 6715768916917753638, guid: 147603ca6ab687c4fb10f6c8e3a823e0, type: 3}
