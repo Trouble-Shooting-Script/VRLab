@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690007849a6dacd41b8b94051abb779b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
   center: {fileID: 2706708384747587405}
   bound: {fileID: 9140265445497309682}
   blockPrefab: {fileID: 440311500160966268, guid: d65150bbbab096645a54b2e0c1a81256, type: 3}
@@ -314,7 +315,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 0
+  m_FarAttachMode: 1
 --- !u!65 &-15191990749110022
 BoxCollider:
   m_ObjectHideFlags: 0
