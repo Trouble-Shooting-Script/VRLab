@@ -3,12 +3,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class Sample : MonoBehaviour
 {
+    private const float BLOCK_SIZE = GridSystem.CELL_SIZE * 0.9921875f;
+    private static readonly Vector3 BOUND_MARGIN = Vector3.one * 4f;
+    public XRBaseInteractable interactable;
+    
     public Transform center;
+    public Transform bound;
+    
     public SampleBlock[,,] Blueprint;
     public SampleBlock blockPrefab;
+    
+    private void Awake()
+    {
+        interactable = GetComponent<XRBaseInteractable>();
+        
+        interactable.firstHoverEntered.AddListener((args =>
+        {
+            bound.gameObject.SetActive(true);
+        }));
+        interactable.lastHoverExited.AddListener((args =>
+        {
+            if (interactable.isSelected == false)
+            {
+                bound.gameObject.SetActive(false);
+            }
+        }));
+        interactable.selectExited.AddListener((args =>
+        {
+            bound.gameObject.SetActive(false);
+        }));
+    }
     
     public GameObject MakeModel(int[,,] bluePrint)
     {
@@ -26,7 +54,7 @@ public class Sample : MonoBehaviour
                     if (bluePrint[x, y, z] == 1)
                     {
                         var b = Instantiate(blockPrefab, transform);
-                        b.transform.localScale = Vector3.one * (GridSystem.CELL_SIZE * 0.9921875f);
+                        b.transform.localScale = Vector3.one * (BLOCK_SIZE);
                         b.transform.localPosition = new Vector3(x, y, z) * GridSystem.CELL_SIZE;
                         Blueprint[x, y, z] = b;
                     }
@@ -35,22 +63,24 @@ public class Sample : MonoBehaviour
         }
         CleanOutline();
         UpdateBound(xSize, ySize, zSize);
-        AdjustCenterPosition(xSize, ySize, zSize);
 
         return gameObject;
     }
 
-    private void AdjustCenterPosition(int x, int y, int z)
+    private void SetCenter(Vector3 position)
     {
-        Vector3 newCenter = (new Vector3(x, y, z) - Vector3.one) * (GridSystem.CELL_SIZE * 0.5f);
-        center.localPosition = newCenter;
+        center.localPosition = position;
     }
 
     private void UpdateBound(int x, int y, int z)
     {
         var col = GetComponent<BoxCollider>();
-        col.size = new Vector3(x, y, z) * GridSystem.CELL_SIZE;
-        col.center = col.size * 0.5f - Vector3.one * (GridSystem.CELL_SIZE * 0.5f);
+        Vector3 gridSize = new Vector3(x, y, z) + BOUND_MARGIN;
+        col.size = gridSize * GridSystem.CELL_SIZE;
+        col.center = (gridSize - Vector3.one - BOUND_MARGIN) * (GridSystem.CELL_SIZE * 0.5f);
+        SetCenter(col.center);
+        bound.transform.localScale = col.size;
+        bound.localPosition = col.center;
     }
     
     private void CleanOutline()
