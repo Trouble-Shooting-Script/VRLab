@@ -19,23 +19,23 @@ public class Sample : MonoBehaviour
     
     private void Awake()
     {
-        interactable = GetComponent<XRBaseInteractable>();
-        
-        interactable.firstHoverEntered.AddListener((args =>
-        {
-            bound.gameObject.SetActive(true);
-        }));
-        interactable.lastHoverExited.AddListener((args =>
-        {
-            if (interactable.isSelected == false)
-            {
-                bound.gameObject.SetActive(false);
-            }
-        }));
-        interactable.selectExited.AddListener((args =>
-        {
-            bound.gameObject.SetActive(false);
-        }));
+        // interactable = GetComponent<XRBaseInteractable>();
+        //
+        // interactable.firstHoverEntered.AddListener((args =>
+        // {
+        //     bound.gameObject.SetActive(true);
+        // }));
+        // interactable.lastHoverExited.AddListener((args =>
+        // {
+        //     if (interactable.isSelected == false)
+        //     {
+        //         bound.gameObject.SetActive(false);
+        //     }
+        // }));
+        // interactable.selectExited.AddListener((args =>
+        // {
+        //     bound.gameObject.SetActive(false);
+        // }));
     }
     
     public GameObject MakeModel(int[,,] bluePrint)

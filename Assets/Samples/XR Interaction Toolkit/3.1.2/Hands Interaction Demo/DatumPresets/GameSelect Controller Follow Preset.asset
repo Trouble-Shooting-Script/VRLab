@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9846808ef0fb41b39630338c123c9269, type: 3}
-  m_Name: Under Watch Controller Follow Preset
+  m_Name: GameSelect Controller Follow Preset
   m_EditorClassIdentifier: 
   m_Comments: 
   m_ReadOnly: 1
   m_Value:
-    rightHandLocalPosition: {x: -0.05, y: -0.02, z: -0.17}
-    leftHandLocalPosition: {x: 0.05, y: -0.02, z: -0.17}
-    rightHandLocalRotation: {x: 0, y: 0, z: -270}
-    leftHandLocalRotation: {x: 0, y: 0, z: 270}
+    rightHandLocalPosition: {x: 0.008, y: -0.2324, z: -0.0233}
+    leftHandLocalPosition: {x: -0.001, y: -0.239, z: 0.023}
+    rightHandLocalRotation: {x: 17.242, y: 76.993, z: 86.111}
+    leftHandLocalRotation: {x: 5, y: -40, z: -90}
     palmReferenceAxis: 0
     invertAxisForRightHand: 1
     requirePalmFacingUser: 1
@@ -26,8 +26,8 @@ MonoBehaviour:
     requirePalmFacingUp: 1
     palmFacingUpDegreeAngleThreshold: 72
     snapToGaze: 0
-    snapToGazeAngleThreshold: 30
-    hideDelaySeconds: 0.15
-    allowSmoothing: 0
-    followLowerSmoothingValue: 12
+    snapToGazeAngleThreshold: 0
+    hideDelaySeconds: 0.25
+    allowSmoothing: 1
+    followLowerSmoothingValue: 10
     followUpperSmoothingValue: 16

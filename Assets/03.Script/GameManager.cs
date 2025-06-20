@@ -13,6 +13,7 @@ public class Figure
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public GameObject gameSelectionPanel;
     public GameObject currentGame;
     public TMP_Text coinText;
     public Transform figureSpawnPoint;
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
             Destroy(currentGame);
         }
         currentGame = Instantiate(gameSet);
+        gameSelectionPanel.SetActive(false);
     }
 
     public void Buy(Figure figure)

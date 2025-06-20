@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,10 +10,12 @@ public class XRDebugUI : MonoBehaviour
     public TMP_Text[] Texts;
     public Transform leftHand;
     public Transform rightHand;
+    public Transform e1;
+    public Transform e2;
 
     private void Update()
     {
-        Texts[0].text = leftHand.rotation.eulerAngles.ToString();
-        Texts[1].text = rightHand.rotation.eulerAngles.ToString();
+        Texts[0].text = e1.position.ToString();
+        Texts[1].text = e2.position.ToString();
     }
 }
