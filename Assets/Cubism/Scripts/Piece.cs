@@ -10,7 +10,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 public class Piece : MonoBehaviour
 {
     private static readonly int EMISSION_COLOR = Shader.PropertyToID("_EmissionColor");
-    private static readonly int COLOR = Shader.PropertyToID("_AlbedoColor");
+    private static readonly int COLOR = Shader.PropertyToID("_Base_Color");
 
     // interactable variables
     public XRBaseInteractable interactable;
