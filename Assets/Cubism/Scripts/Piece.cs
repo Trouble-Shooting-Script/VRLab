@@ -152,7 +152,7 @@ public class Piece : MonoBehaviour
     private void TryMerge(out bool isUpdateSuccess, out bool isInArea)
     {
         isUpdateSuccess = TryUpdateSnapshot(snapshot, 1, v => v == 0, i => i == 1, out isInArea);
-        Debug.Log($"update success: {isUpdateSuccess}, in area: {isInArea}");
+        //Debug.Log($"update success: {isUpdateSuccess}, in area: {isInArea}");
     }
 
     private bool TryUpdateSnapshot(Int3DArray arrayToUpdate, int valueToSet, Func<int, bool> targetCondition)
@@ -162,7 +162,7 @@ public class Piece : MonoBehaviour
     
     private bool TryUpdateSnapshot(Int3DArray arrayToUpdate, int valueToSet, Func<int,bool> targetCondition, Func<int, bool> conflictCheck, out bool isInArea)
     {
-        Debug.Log("<color=red>TryUpdateSnapshot</color>");
+        //Debug.Log("<color=red>TryUpdateSnapshot</color>");
         isInArea = false;
         foreach (var block in blocks)
         {
@@ -178,18 +178,18 @@ public class Piece : MonoBehaviour
                     arrayToUpdate[x, y, z] = valueToSet;
                     isInArea = true;
                     
-                    Debug.Log($"{x}, {y}, {z} = {valueToSet}");
+                    //Debug.Log($"{x}, {y}, {z} = {valueToSet}");
                 }
                 else if (conflictCheck != null && conflictCheck(arrayToUpdate[x, y, z]))
                 {
-                    Debug.Log($"conflict at {x}, {y}, {z} with value {arrayToUpdate[x, y, z]}");
+                    //Debug.Log($"conflict at {x}, {y}, {z} with value {arrayToUpdate[x, y, z]}");
                     return false;
                 }
             }
             catch (Exception e)
             {
                 // out of index
-                Debug.Log($"Out of index at {x}, {y}, {z}.");
+                //Debug.Log($"Out of index at {x}, {y}, {z}.");
             }
         }
 

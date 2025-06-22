@@ -45,11 +45,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Cut_Line: 0.46
+    - _Cut_Line: 0
     - _Line_Width: 0.032
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
+    - _BaseColor: {r: 0, g: 0, b: 0, a: 0}
     - _Base_Color: {r: 1, g: 0, b: 0, a: 0}
     - _Complete_Color: {r: 1.498039, g: 1.145098, b: 0.149804, a: 0}
     - _Emission_Color: {r: 3.7785242, g: 3.0972292, b: 1.1228633, a: 0}
