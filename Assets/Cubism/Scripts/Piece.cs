@@ -140,7 +140,7 @@ public class Piece : MonoBehaviour
             transform.rotation = rot;
             transform.parent = boardTransform;
             rigidbody.isKinematic = false;
-            Debug.Log("Reverted");
+            //Debug.Log("Reverted");
         }
     }
 

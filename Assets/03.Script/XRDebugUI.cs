@@ -15,6 +15,7 @@ public class XRDebugUI : MonoBehaviour
 
     public float middleEndTime { get; set; }
     public float tolerance = 0.1f; // seconds
+    public GameObject testObject;
 
     private void Update()
     {
@@ -37,6 +38,7 @@ public class XRDebugUI : MonoBehaviour
         if(middleEndTime + tolerance < Time.timeSinceLevelLoad)
         {
             PrintDebug(3, "Finger Snap Detected");
+            testObject.SetActive(!testObject.activeSelf);
         }
     }
 }
