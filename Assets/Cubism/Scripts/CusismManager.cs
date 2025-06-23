@@ -123,7 +123,7 @@ public class CusismManager : MonoBehaviour
         
         Vector3 distance = absBoard.transform.right * 0.2f;
         float degree = 180f / (shuffledBluePrints.Length - 1);
-        Debug.Log($"{shuffledBluePrints.Length} / {degree}");
+//        Debug.Log($"{shuffledBluePrints.Length} / {degree}");
         
         for (int i = 0; i < shuffledBluePrints.Length; i++)
         {
