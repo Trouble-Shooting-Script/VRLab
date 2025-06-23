@@ -10,7 +10,7 @@ public class SpawnEffect : MonoBehaviour
     [SerializeField] private Material[] m_OrgMats;
     [SerializeField] private Material[] m_DissolveMats;
     [SerializeField] private Material[] m_PhaseMats;
-    [SerializeField] private float m_FadeTime = 1.0f;
+    [SerializeField] private float m_FadeTime = 3.0f;
     [SerializeField] private bool m_IsDissolve;
     [SerializeField] private GameObject[] m_EnableObjects;
     private Material[] m_CDissolveMats;
