@@ -13,6 +13,16 @@ public class SpawnEffect : MonoBehaviour
     [SerializeField] private float m_FadeTime = 2.0f;
     [SerializeField] private bool m_IsDissolve;
     private Material[] m_CDissolveMats;
+    private bool m_IsDestroy = false;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            DestroyObject();
+        }
+    }
+
     private void Awake()
     {
         m_CDissolveMats = m_DissolveMats;
@@ -27,6 +37,15 @@ public class SpawnEffect : MonoBehaviour
             DoFade(0, 4, m_FadeTime);
         }
     }
+
+    private void DestroyObject()
+    {
+        m_CDissolveMats = m_DissolveMats;
+        m_Renderer.materials = m_CDissolveMats;
+        DoFade(4, 0, m_FadeTime);
+        m_IsDestroy = true;
+    }
+
 
     void DoFade(float start, float dest, float time)
     {
@@ -46,6 +65,10 @@ public class SpawnEffect : MonoBehaviour
     void TweenOnComplete()
     {
         m_Renderer.materials = m_OrgMats;
+        if (m_IsDestroy)
+        {
+            Destroy(gameObject);
+        }
     }
     /*[SerializeField] private Renderer m_Renderer;
     [SerializeField] private Material m_OrgMat;
