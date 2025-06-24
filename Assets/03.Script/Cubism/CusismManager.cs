@@ -21,7 +21,21 @@ public class CusismManager : MonoBehaviour
         new Color(1.000f, 0.764f, 0.741f, 1.0f)
     };
     public Material clearEffectMaterial;
+
     private float cutLine = 0.0f;
+    private float CutLine
+    {
+        get => cutLine;
+        set
+        {
+            cutLine = value;
+            if (clearEffectMaterial != null)
+            {
+                clearEffectMaterial.SetFloat(CUT_LINE, cutLine);
+            }
+        }
+    }
+
     private float cutLineMax = 3.0f;
     private bool isClear = false;
     
@@ -45,16 +59,14 @@ public class CusismManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            clearEffectMaterial.SetFloat(CUT_LINE, cutLine);
         }
     }
 
     private void Update()
     {
-        if (isClear && cutLine < cutLineMax)
+        if (isClear && CutLine < cutLineMax)
         {
-            cutLine += Time.deltaTime * 0.15f;
-            clearEffectMaterial.SetFloat(CUT_LINE, cutLine);
+            CutLine += Time.deltaTime * 0.15f;
         }
     }
 
@@ -83,7 +95,7 @@ public class CusismManager : MonoBehaviour
 
     private void MakeBoard(ShapeSetData shapeSetData, Vector3 position, Quaternion rotation)
     {
-        cutLine = 0f;
+        CutLine = 0f;
         isClear = false;
         
         currentPuzzleData = shapeSetData;
@@ -158,7 +170,7 @@ public class CusismManager : MonoBehaviour
         
         clearPuzzleData.Add(currentPuzzleData);
         GameManager.instance.CurrentCoin += prizeCoin;
-        cutLine = puzzle.GetComponent<Collider>().bounds.min.y;
+        CutLine = puzzle.GetComponent<Collider>().bounds.min.y;
         isClear = true;
         
         Debug.Log("아 성공");
