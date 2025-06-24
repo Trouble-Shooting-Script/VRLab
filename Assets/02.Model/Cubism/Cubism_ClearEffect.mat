@@ -46,7 +46,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Cut_Line: 0
-    - _Line_Width: 0.032
+    - _Line_Width: 0.01
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:

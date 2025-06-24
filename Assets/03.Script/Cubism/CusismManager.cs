@@ -8,6 +8,8 @@ using Random = UnityEngine.Random;
 public class CusismManager : MonoBehaviour
 {
     public static CusismManager instance;
+    
+    [Header("Piece Colors")]
     private static Color[] colors =
     {
         new Color(1.000f, 0.595f, 0.541f, 1.0f),
@@ -18,15 +20,22 @@ public class CusismManager : MonoBehaviour
         new Color(1.000f, 0.882f, 0.610f, 1.0f),
         new Color(1.000f, 0.764f, 0.741f, 1.0f)
     };
+    public Material clearEffectMaterial;
+    private float cutLine = 0.0f;
+    private float cutLineMax = 3.0f;
+    private bool isClear = false;
+    
+    
     public List<GameObject> toyBucket = new();
     public Sample samplePrefab;
     public Piece piecePrefab;
     [HideInInspector] public GameObject puzzle;
-    public ShapeSetData data;
     public Int3DArray Answer;
 
     [Header("Whole Game Variables")]
     public static List<ShapeSetData> clearPuzzleData = new List<ShapeSetData>();
+
+    private static readonly int CUT_LINE = Shader.PropertyToID("_Cut_Line");
     public ShapeSetData currentPuzzleData;
     public int prizeCoin = 10;
 
@@ -36,6 +45,16 @@ public class CusismManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            clearEffectMaterial.SetFloat(CUT_LINE, cutLine);
+        }
+    }
+
+    private void Update()
+    {
+        if (isClear && cutLine < cutLineMax)
+        {
+            cutLine += Time.deltaTime * 0.15f;
+            clearEffectMaterial.SetFloat(CUT_LINE, cutLine);
         }
     }
 
@@ -64,6 +83,9 @@ public class CusismManager : MonoBehaviour
 
     private void MakeBoard(ShapeSetData shapeSetData, Vector3 position, Quaternion rotation)
     {
+        cutLine = 0f;
+        isClear = false;
+        
         currentPuzzleData = shapeSetData;
         DestroyAll();
         
@@ -136,6 +158,9 @@ public class CusismManager : MonoBehaviour
         
         clearPuzzleData.Add(currentPuzzleData);
         GameManager.instance.CurrentCoin += prizeCoin;
+        cutLine = puzzle.GetComponent<Collider>().bounds.min.y;
+        isClear = true;
+        
         Debug.Log("아 성공");
     }
 }

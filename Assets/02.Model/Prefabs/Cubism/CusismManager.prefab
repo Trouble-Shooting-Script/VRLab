@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e06fd1b87588642948853c1fdd1ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clearEffectMaterial: {fileID: 2100000, guid: 8e09bae1e0a7f94488f92bd7ba256abf, type: 2}
   toyBucket: []
   samplePrefab: {fileID: 5253864124338152408, guid: 776127ef956ef084090b8d187b5d98b0, type: 3}
   piecePrefab: {fileID: 224406836647188174, guid: 8d1fe4cb6430326429be8ce0451196a7, type: 3}
@@ -56,4 +57,3 @@ MonoBehaviour:
     data: 
   currentPuzzleData: {fileID: 0}
   prizeCoin: 10
-  firework: {fileID: 6715768916917753638, guid: 147603ca6ab687c4fb10f6c8e3a823e0, type: 3}

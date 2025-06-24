@@ -764,6 +764,7 @@ Transform:
   - {fileID: 2111232476}
   - {fileID: 1017718763}
   - {fileID: 120093503}
+  - {fileID: 2077424894}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2077424890
@@ -779,7 +780,7 @@ GameObject:
   - component: {fileID: 2077424892}
   - component: {fileID: 2077424891}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Fingersnap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -865,12 +866,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077424890}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 2.259, z: 6.92}
   m_LocalScale: {x: 2.9, y: 2.9, z: 2.9}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1971491124}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2111232475
 GameObject:
@@ -1094,5 +1095,4 @@ SceneRoots:
   - {fileID: 1395094845}
   - {fileID: 1470193123}
   - {fileID: 796763666}
-  - {fileID: 2077424894}
   - {fileID: 1971491124}
