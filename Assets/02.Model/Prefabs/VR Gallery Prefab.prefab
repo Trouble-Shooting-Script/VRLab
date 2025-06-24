@@ -63034,8 +63034,11 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
-  m_StartingSingleGrabTransformers: []
-  m_StartingMultipleGrabTransformers: []
+  m_StartingSingleGrabTransformers:
+  - {fileID: 5898981105239605277}
+  m_StartingMultipleGrabTransformers:
+  - {fileID: 4286319722042964616}
+  - {fileID: 5898981105239605277}
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
 --- !u!65 &8185411118671367331
