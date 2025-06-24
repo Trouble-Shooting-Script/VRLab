@@ -16,14 +16,6 @@ public class SpawnEffect : MonoBehaviour
     private Material[] m_CDissolveMats;
     private bool m_IsDestroy = false;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            DestroyObject();
-        }
-    }
-
     private void Awake()
     {
         m_CDissolveMats = m_DissolveMats;
@@ -43,7 +35,7 @@ public class SpawnEffect : MonoBehaviour
     {
         m_CDissolveMats = m_DissolveMats;
         m_Renderer.materials = m_CDissolveMats;
-        DoFade(4, 0, m_FadeTime);
+        DoFade(2, 0, m_FadeTime);
         m_IsDestroy = true;
     }
 
