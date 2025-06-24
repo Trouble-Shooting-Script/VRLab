@@ -39,18 +39,6 @@ public class CusismManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            MakeBoard(data, Camera.main.transform.position + new Vector3(0, -0.1f, 0.6f), Quaternion.identity);
-        }
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            
-        }
-    }
-
     private void OnDestroy()
     {
         DestroyAll();

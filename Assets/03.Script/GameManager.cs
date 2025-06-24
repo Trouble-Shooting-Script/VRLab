@@ -13,6 +13,7 @@ public class Figure
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public Transform xrOrigin;
     public GameObject gameSelectionPanel;
     public GameObject currentGame;
     public TMP_Text coinText;
@@ -43,12 +44,17 @@ public class GameManager : MonoBehaviour
 
     public void StartGame(GameObject gameSet)
     {
+        StartGame(gameSet, xrOrigin.position, xrOrigin.rotation);
+    }
+
+    private void StartGame(GameObject gameSet, Vector3 position, Quaternion rotation)
+    {
         if (currentGame != null)
         {
             Debug.Log("Destroying current game: " + currentGame.name);
             Destroy(currentGame);
         }
-        currentGame = Instantiate(gameSet);
+        currentGame = Instantiate(gameSet, position, rotation);
         gameSelectionPanel.SetActive(false);
     }
 
