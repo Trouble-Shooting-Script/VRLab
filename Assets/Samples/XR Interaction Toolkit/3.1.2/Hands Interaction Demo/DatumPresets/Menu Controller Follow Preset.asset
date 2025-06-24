@@ -25,7 +25,7 @@ MonoBehaviour:
     palmFacingUserDegreeAngleThreshold: 54
     requirePalmFacingUp: 1
     palmFacingUpDegreeAngleThreshold: 72
-    snapToGaze: 1
+    snapToGaze: 0
     snapToGazeAngleThreshold: 30
     hideDelaySeconds: 0.15
     allowSmoothing: 1
