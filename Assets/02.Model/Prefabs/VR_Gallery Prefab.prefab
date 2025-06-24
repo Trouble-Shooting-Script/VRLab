@@ -271,6 +271,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!65 &4168706502198037470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2229,6 +2230,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &461938141102932802
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,6 +2418,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &475129262099812251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,6 +3991,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &688004148287722054
 GameObject:
   m_ObjectHideFlags: 0
@@ -4258,6 +4262,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &720912840263516963
 GameObject:
   m_ObjectHideFlags: 0
@@ -5581,6 +5586,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &1066678460225339804
 GameObject:
   m_ObjectHideFlags: 0
@@ -24558,6 +24564,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &2159080078482220405
 GameObject:
   m_ObjectHideFlags: 0
@@ -24863,6 +24870,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &2207499634466566223
 GameObject:
   m_ObjectHideFlags: 0
@@ -26996,6 +27004,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 4
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &2643478578062683739
 GameObject:
   m_ObjectHideFlags: 0
@@ -29023,6 +29032,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!114 &3954108738364240076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36345,6 +36355,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &3550748700550165819
 GameObject:
   m_ObjectHideFlags: 0
@@ -39199,6 +39210,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 4
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &4115150262451555408
 GameObject:
   m_ObjectHideFlags: 0
@@ -41533,6 +41545,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &4540205537385588889
 GameObject:
   m_ObjectHideFlags: 0
@@ -44288,6 +44301,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &5096450593068539793
 GameObject:
   m_ObjectHideFlags: 0
@@ -44717,6 +44731,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 4
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &5112259688183998195
 GameObject:
   m_ObjectHideFlags: 0
@@ -45133,6 +45148,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 4
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &5177194218066570969
 GameObject:
   m_ObjectHideFlags: 0
@@ -47582,6 +47598,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &5755470152416164729
 GameObject:
   m_ObjectHideFlags: 0
@@ -53690,6 +53707,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &6012479673640473968
 GameObject:
   m_ObjectHideFlags: 0
@@ -54079,6 +54097,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &6071925431788706865
 GameObject:
   m_ObjectHideFlags: 0
@@ -54598,6 +54617,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &6101455530806750646
 GameObject:
   m_ObjectHideFlags: 0
@@ -54785,6 +54805,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &6122670713226170445
 GameObject:
   m_ObjectHideFlags: 0
@@ -63182,6 +63203,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 4
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &6800379754405712649
 GameObject:
   m_ObjectHideFlags: 0
@@ -63321,6 +63343,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &6816153819554740396
 GameObject:
   m_ObjectHideFlags: 0
@@ -65035,6 +65058,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 4
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &7214822746096331081
 GameObject:
   m_ObjectHideFlags: 0
@@ -66466,6 +66490,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 4
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &7441739904068414417
 GameObject:
   m_ObjectHideFlags: 0
@@ -67013,6 +67038,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 4
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &7500911117559088545
 GameObject:
   m_ObjectHideFlags: 0
@@ -68271,6 +68297,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &7782011133434249388
 GameObject:
   m_ObjectHideFlags: 0
@@ -68541,6 +68568,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &7832373413806504706
 GameObject:
   m_ObjectHideFlags: 0
@@ -70835,6 +70863,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &8427071648903834841
 GameObject:
   m_ObjectHideFlags: 0
@@ -71140,6 +71169,7 @@ MonoBehaviour:
   m_PhaseMats: []
   m_FadeTime: 2
   m_IsDissolve: 1
+  m_EnableObjects: []
 --- !u!1 &8545086721403261346
 GameObject:
   m_ObjectHideFlags: 0

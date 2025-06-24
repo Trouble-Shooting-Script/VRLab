@@ -22,12 +22,20 @@ public class SpawnEffect : MonoBehaviour
         if (m_IsDissolve)
         {
             m_Renderer.materials = m_CDissolveMats;
-            DoFade(0, 1, m_FadeTime);
+            //DoFade(0, 1, m_FadeTime);
         }
         else
         {
             m_Renderer.materials = m_PhaseMats;
             DoFade(0, 2, m_FadeTime);
+        }
+    }
+
+    private void Start()
+    {
+        if (m_IsDissolve)
+        {
+            DoFade(0, 1, m_FadeTime);
         }
     }
 
