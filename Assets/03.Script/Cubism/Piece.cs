@@ -98,11 +98,11 @@ public class Piece : MonoBehaviour
     private void OnRelease(SelectExitEventArgs args)
     {
         // make a snapshot
-        snapshot = CusismManager.instance.Answer.Clone();
+        snapshot = CubismManager.instance.Answer.Clone();
         Vector3 pos = transform.position;
         Quaternion rot = transform.rotation;
         
-        GridSystem.RelativeSnap(transform, CusismManager.instance.puzzle.transform);
+        GridSystem.RelativeSnap(transform, CubismManager.instance.puzzle.transform);
 
         TryMerge(out bool isUpdateSuccess, out bool isInArea);
         if (isUpdateSuccess)
@@ -110,11 +110,11 @@ public class Piece : MonoBehaviour
             if (isInArea)
             {
                 rigidbody.isKinematic = true;
-                transform.parent = CusismManager.instance.puzzle.transform;
+                transform.parent = CubismManager.instance.puzzle.transform;
             }
             
             // apply the changes
-            CusismManager.instance.Answer = snapshot;
+            CubismManager.instance.Answer = snapshot;
                 
             // check puzzle completion
             bool isSolved = true;
@@ -128,7 +128,7 @@ public class Piece : MonoBehaviour
             }
             if (isSolved)
             {
-                CusismManager.instance.Clear();
+                CubismManager.instance.Clear();
             }
         }
         
@@ -145,7 +145,7 @@ public class Piece : MonoBehaviour
 
     private void SeparateFromPuzzle()
     {
-        TryUpdateSnapshot(CusismManager.instance.Answer, 0, v => v == 1);
+        TryUpdateSnapshot(CubismManager.instance.Answer, 0, v => v == 1);
     }
 
     private void TryMerge(out bool isUpdateSuccess, out bool isInArea)
@@ -165,7 +165,7 @@ public class Piece : MonoBehaviour
         isInArea = false;
         foreach (var block in blocks)
         {
-            Vector3 coord = CusismManager.instance.puzzle.transform.InverseTransformPoint(block.transform.position) / GridSystem.CELL_SIZE;
+            Vector3 coord = CubismManager.instance.puzzle.transform.InverseTransformPoint(block.transform.position) / GridSystem.CELL_SIZE;
             int x = Mathf.RoundToInt(coord.x);
             int y = Mathf.RoundToInt(coord.y);
             int z = Mathf.RoundToInt(coord.z);

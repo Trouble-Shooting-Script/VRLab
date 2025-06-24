@@ -43751,7 +43751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2734515600169118068}
   m_Layer: 0
-  m_Name: Gallery Prefab
+  m_Name: VR Gallery Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62842,7 +62842,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.9, y: 0.521, z: 4.471}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2173509709962443506}

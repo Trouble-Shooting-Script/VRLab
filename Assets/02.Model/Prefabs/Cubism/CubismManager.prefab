@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4792854980246937251}
   - component: {fileID: 6850588159419989970}
   m_Layer: 0
-  m_Name: CusismManager
+  m_Name: CubismManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

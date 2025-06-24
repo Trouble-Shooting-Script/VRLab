@@ -5,9 +5,9 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
-public class CusismManager : MonoBehaviour
+public class CubismManager : MonoBehaviour
 {
-    public static CusismManager instance;
+    public static CubismManager instance;
     
     [Header("Piece Colors")]
     private static Color[] colors =
@@ -43,6 +43,7 @@ public class CusismManager : MonoBehaviour
     public List<GameObject> toyBucket = new();
     public Sample samplePrefab;
     public Piece piecePrefab;
+    public Transform puzzleOffset;
     [HideInInspector] public GameObject puzzle;
     public Int3DArray Answer;
 
@@ -90,7 +91,7 @@ public class CusismManager : MonoBehaviour
 
     public void MakeBoard(ShapeSetData shapeSetData)
     {
-        MakeBoard(shapeSetData, Camera.main.transform.position + new Vector3(0, -0.1f, 0.45f), Quaternion.identity);
+        MakeBoard(shapeSetData, puzzleOffset.position, puzzleOffset.rotation);
     }
 
     private void MakeBoard(ShapeSetData shapeSetData, Vector3 position, Quaternion rotation)
