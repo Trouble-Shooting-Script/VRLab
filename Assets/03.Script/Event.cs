@@ -36,7 +36,7 @@ namespace UnityEngine.XR.Content.Interaction
         
         public void AddScore()
         {
-            ScoreManager.instance.AddScore(score);
+            GameManager.instance.CurrentCoin++;
         }
     }
 }
