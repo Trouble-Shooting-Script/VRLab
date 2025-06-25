@@ -45,6 +45,7 @@ namespace UnityEngine.XR.Content.Interaction
 
         void OnTriggerExit(Collider other)
         {
+            Debug.Log(other.gameObject.name);
             if (CanTrigger(other.gameObject))
                 m_OnExit?.Invoke(other.gameObject);
         }
