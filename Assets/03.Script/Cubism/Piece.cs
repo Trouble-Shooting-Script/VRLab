@@ -9,7 +9,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 public class Piece : MonoBehaviour
 {
     private static readonly int EMISSION_COLOR = Shader.PropertyToID("_EmissionColor");
-    private static readonly int COLOR = Shader.PropertyToID("_Base_Color");
+    private static readonly int COLOR = Shader.PropertyToID("_AlbedoColor");
 
     // interactable variables
     public XRBaseInteractable interactable;
@@ -78,7 +78,6 @@ public class Piece : MonoBehaviour
                         Color emissionColor = Color.HSVToRGB(h, s * 2, v);
                         var r = b.GetComponent<Renderer>();
                         var mat = r.material;
-                        mat.EnableKeyword("_MK_EMISSION");
                         mat.SetColor(COLOR, color);
                         mat.SetColor(EMISSION_COLOR, emissionColor);
                         
