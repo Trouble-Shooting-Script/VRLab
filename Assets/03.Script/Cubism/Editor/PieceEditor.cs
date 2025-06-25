@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 using UnityEditor;
-using UnityEngine;
 
 [CustomEditor(typeof(Piece))]
 public class PieceEditor : Editor
@@ -16,7 +11,7 @@ public class PieceEditor : Editor
 
         if (script.snapshot != null && script.snapshot.data != null)
         {
-            for (int x= 0; x < script.snapshot.sizeX; x++)
+            for (int x = 0; x < script.snapshot.sizeX; x++)
             {
                 EditorGUILayout.LabelField($"Slice X={x}");
                 for (int y = 0; y < script.snapshot.sizeY; y++)
@@ -24,8 +19,9 @@ public class PieceEditor : Editor
                     string row = "";
                     for (int z = 0; z < script.snapshot.sizeZ; z++)
                     {
-                        row += script.snapshot[x, y, z].ToString() + " ";
+                        row += script.snapshot[x, y, z] + " ";
                     }
+
                     EditorGUILayout.LabelField(row);
                 }
             }
