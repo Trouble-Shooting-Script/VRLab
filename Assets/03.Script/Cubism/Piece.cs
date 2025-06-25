@@ -75,9 +75,10 @@ public class Piece : MonoBehaviour
                         Color.RGBToHSV(color, out float h, out float s, out float v);
                         Color emissionColor = Color.HSVToRGB(h, s * 2, v);
                         var r = b.GetComponent<Renderer>();
-                        r.material.EnableKeyword("_MK_EMISSION");
-                        r.material.SetColor(COLOR, color);
-                        r.material.SetColor(EMISSION_COLOR, emissionColor);
+                        var mat = r.material;
+                        mat.EnableKeyword("_MK_EMISSION");
+                        mat.SetColor(COLOR, color);
+                        mat.SetColor(EMISSION_COLOR, emissionColor);
                         
                         blocks.Add(b);
                     }
