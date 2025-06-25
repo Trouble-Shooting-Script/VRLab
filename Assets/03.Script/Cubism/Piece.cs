@@ -23,6 +23,9 @@ public class Piece : MonoBehaviour
     public List<GameObject> blocks = new List<GameObject>();
     public Int3DArray snapshot;
 
+    public static Vector3 colliderSmallSize = Vector3.one * 0.8f;
+    public static Vector3 colliderDefaultSize = Vector3.one;
+
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -90,14 +93,25 @@ public class Piece : MonoBehaviour
         return gameObject;
     }
 
+    private void SetColliderSize(Vector3 size)
+    {
+        foreach (BoxCollider coll in interactable.colliders)
+        {
+            coll.size = size;
+        }
+    }
+
     private void OnGrab(SelectEnterEventArgs args)
     {
+        SetColliderSize(colliderSmallSize);
         rigidbody.isKinematic = false;
         SeparateFromPuzzle();
     }
 
     private void OnRelease(SelectExitEventArgs args)
     {
+        SetColliderSize(colliderDefaultSize);
+        
         // make a snapshot
         snapshot = CubismManager.instance.Answer.Clone();
         Vector3 pos = transform.position;
