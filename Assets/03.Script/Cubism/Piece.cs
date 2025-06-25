@@ -19,13 +19,12 @@ public class Piece : MonoBehaviour
     public Outlinable outlinable;
     
     // block variables
+    private static readonly Vector3 COLLIDER_SMALL_SIZE = Vector3.one * 0.8f;
+    private static readonly Vector3 COLLIDER_DEFAULT_SIZE = Vector3.one;
     public GameObject blockPrefab;
     public List<GameObject> blocks = new List<GameObject>();
     public Int3DArray snapshot;
-
-    public static Vector3 colliderSmallSize = Vector3.one * 0.8f;
-    public static Vector3 colliderDefaultSize = Vector3.one;
-
+    
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -103,14 +102,14 @@ public class Piece : MonoBehaviour
 
     private void OnGrab(SelectEnterEventArgs args)
     {
-        SetColliderSize(colliderSmallSize);
+        SetColliderSize(COLLIDER_SMALL_SIZE);
         rigidbody.isKinematic = false;
         SeparateFromPuzzle();
     }
 
     private void OnRelease(SelectExitEventArgs args)
     {
-        SetColliderSize(colliderDefaultSize);
+        SetColliderSize(COLLIDER_DEFAULT_SIZE);
         
         // make a snapshot
         snapshot = CubismManager.instance.Answer.Clone();
