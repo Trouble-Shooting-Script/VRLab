@@ -16,6 +16,7 @@ TagManager:
   - GasTank
   - Metal
   - Target
+  - Bullet
   layers:
   - Default
   - TransparentFX
