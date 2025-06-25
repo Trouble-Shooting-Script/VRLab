@@ -9,6 +9,14 @@ TagManager:
   - Destroyer
   - MiniWorldCamera
   - Water
+  - Cubism_Piece
+  - Cubism_Sample
+  - Concrete
+  - ExplosiveBarrel
+  - GasTank
+  - Metal
+  - Target
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -35,9 +43,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Cubism/Piece
+  - Gun
+  - NoMask
   - Pushable
   - Character Collider
   - Character Controller

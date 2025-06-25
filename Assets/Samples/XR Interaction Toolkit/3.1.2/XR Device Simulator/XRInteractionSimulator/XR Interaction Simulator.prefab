@@ -931,7 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a798ede3f9ef495cb5b62f2a9896b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RemoveOtherHMDDevices: 1
+  m_RemoveOtherHMDDevices: 0
   m_HandTrackingCapability: 1
 --- !u!114 &4976647607938919449
 MonoBehaviour:
