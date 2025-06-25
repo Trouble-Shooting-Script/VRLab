@@ -19,10 +19,12 @@ public class Piece : MonoBehaviour
     public Outlinable outlinable;
     
     // block variables
+    private static readonly Vector3 COLLIDER_SMALL_SIZE = Vector3.one * 0.8f;
+    private static readonly Vector3 COLLIDER_DEFAULT_SIZE = Vector3.one;
     public GameObject blockPrefab;
     public List<GameObject> blocks = new List<GameObject>();
     public Int3DArray snapshot;
-
+    
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -75,9 +77,10 @@ public class Piece : MonoBehaviour
                         Color.RGBToHSV(color, out float h, out float s, out float v);
                         Color emissionColor = Color.HSVToRGB(h, s * 2, v);
                         var r = b.GetComponent<Renderer>();
-                        r.material.EnableKeyword("_MK_EMISSION");
-                        r.material.SetColor(COLOR, color);
-                        r.material.SetColor(EMISSION_COLOR, emissionColor);
+                        var mat = r.material;
+                        mat.EnableKeyword("_MK_EMISSION");
+                        mat.SetColor(COLOR, color);
+                        mat.SetColor(EMISSION_COLOR, emissionColor);
                         
                         blocks.Add(b);
                     }
@@ -89,14 +92,25 @@ public class Piece : MonoBehaviour
         return gameObject;
     }
 
+    private void SetColliderSize(Vector3 size)
+    {
+        foreach (BoxCollider coll in interactable.colliders)
+        {
+            coll.size = size;
+        }
+    }
+
     private void OnGrab(SelectEnterEventArgs args)
     {
+        SetColliderSize(COLLIDER_SMALL_SIZE);
         rigidbody.isKinematic = false;
         SeparateFromPuzzle();
     }
 
     private void OnRelease(SelectExitEventArgs args)
     {
+        SetColliderSize(COLLIDER_DEFAULT_SIZE);
+        
         // make a snapshot
         snapshot = CubismManager.instance.Answer.Clone();
         Vector3 pos = transform.position;
