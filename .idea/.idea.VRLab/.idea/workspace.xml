@@ -5,13 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91db4e2f-d9ff-49fd-b9cc-01a93751eb99" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scene/InGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scene/InGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Cubism_ClearEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/Cubism/Cubism_ClearEffect.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/NormalBlock.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/Cubism/NormalBlock.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Prefabs/XR Origin (XR Rig).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/Prefabs/XR Origin (XR Rig).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Shooting/9mm Bullet Sep Low Head.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/Shooting/9mm Bullet Sep Low Head.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scene/TsetScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scene/TsetScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Cubism_ClearEffect.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Cubism_ClearEffect.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Cubism_ClearEffect.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Cubism_ClearEffect.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/2.001 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/2.001 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/2.001.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/2.001.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/Glass.001 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/Glass.001 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/Glass.001.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/Glass.001.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/Glass.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/Glass.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/cUBE.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/cUBE.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/phc 6.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/phc 6.blend.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/phc 6.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/phc 6.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/phc 7.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/Env/phc 7.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/NormalBlock.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/NormalBlock.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/SampleBound.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/SampleBound.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/SampleBound.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Cubism/SampleBound.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Figure ShowCase/Frame.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/Figure ShowCase/Frame.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Prefabs/Cubism/Block/SampleBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/Prefabs/Cubism/Block/SampleBlock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Script/Cubism/Sample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Script/Cubism/Sample.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenXR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenXR Package Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +56,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.12/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@14.0.12/Editor/Generation/Targets/BuiltIn/Editor/AssetPostProcessors/MaterialPostprocessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/Interaction/Interactables/XRGrabInteractable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -39,6 +73,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "Feature/YGH",
+    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,11 +83,33 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Attach to Unity Editor.Unity 에디터에 연결">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.62f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\KGA\Documents\VRLab -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\KGA\Documents\VRLab" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.62f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\KGA\Desktop\UnityProjects\VRLab -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\KGA\Desktop\UnityProjects\VRLab" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.62f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\KGA\Desktop\UnityProjects\VRLab -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\KGA\Desktop\UnityProjects\VRLab" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="ENV_FILE_PATHS" value="" />
@@ -71,7 +128,7 @@
       <option name="PTY_MODE" value="Auto" />
       <method v="2" />
     </configuration>
-    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
@@ -85,7 +142,7 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Unreal 에디터에 연결 후 재생" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
@@ -111,6 +168,7 @@
       <workItem from="1750653819450" duration="6773000" />
       <workItem from="1750725854529" duration="7060000" />
       <workItem from="1750815463425" duration="6572000" />
+      <workItem from="1750897964015" duration="8191000" />
     </task>
     <servers />
   </component>
@@ -126,5 +184,23 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -8,7 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 public class Sample : MonoBehaviour
 {
     private const float BLOCK_SIZE = GridSystem.CELL_SIZE * 0.9921875f;
-    private static readonly Vector3 BOUND_MARGIN = Vector3.one * 4f;
+    private static readonly Vector3 BOUND_MARGIN = Vector3.one * 2f;
     public XRBaseInteractable interactable;
     
     public Transform center;
@@ -19,23 +19,23 @@ public class Sample : MonoBehaviour
     
     private void Awake()
     {
-        // interactable = GetComponent<XRBaseInteractable>();
-        //
-        // interactable.firstHoverEntered.AddListener((args =>
-        // {
-        //     bound.gameObject.SetActive(true);
-        // }));
-        // interactable.lastHoverExited.AddListener((args =>
-        // {
-        //     if (interactable.isSelected == false)
-        //     {
-        //         bound.gameObject.SetActive(false);
-        //     }
-        // }));
-        // interactable.selectExited.AddListener((args =>
-        // {
-        //     bound.gameObject.SetActive(false);
-        // }));
+        interactable = GetComponent<XRBaseInteractable>();
+        
+        interactable.firstHoverEntered.AddListener((args =>
+        {
+            bound.gameObject.SetActive(true);
+        }));
+        interactable.lastHoverExited.AddListener((args =>
+        {
+            if (interactable.isSelected == false)
+            {
+                bound.gameObject.SetActive(false);
+            }
+        }));
+        interactable.selectExited.AddListener((args =>
+        {
+            bound.gameObject.SetActive(false);
+        }));
     }
     
     public GameObject MakeModel(int[,,] bluePrint)
