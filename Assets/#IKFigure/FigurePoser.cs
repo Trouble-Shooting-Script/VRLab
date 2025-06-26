@@ -25,41 +25,42 @@ public class FigurePoser : MonoBehaviour
         "Right_Hand"
     };
     public IKTarget ikTargetPrefab;
+    public GameObject poseEditMenuPrefab;
+    
     public FullBodyBipedIK fbb;
     private BipedReferences ikRef;
     private Transform rootBone;
     private List<Transform> bones = new List<Transform>();
     private List<IKTarget> ikTargets = new List<IKTarget>();
-    private GameObject targetsParent;
+    private GameObject rootObject;
     
     [ContextMenu("Initialize")]
     private void Initialize()
     {
-        if (fbb == null)
-        {
-            fbb = GetComponent<FullBodyBipedIK>();
-        }
-        if (fbb != null)
-        {
-            InitializeIKTargets(fbb);
-        }
+        InitializeIKTargets(fbb);
     }
+
+	private void Start()
+	{
+        
+	}
 
     public void InitializeIKTargets(FullBodyBipedIK fullBodyBipedIK)
     {
         bones.Clear();
         ikTargets.Clear();
-        if (targetsParent != null)
-        {
-            DestroyImmediate(targetsParent);
-        }
         
         fbb = fullBodyBipedIK;
         ikRef = fbb.references;
 
-        targetsParent = new GameObject();
+        rootObject = Instantiate(poseEditMenuPrefab, fbb.transform);
+        rootObject.name = "PoseEditor";
+        rootObject.transform.position = ikRef.head.position;
+
+        GameObject targetsParent = new GameObject();
         targetsParent.name = "IKTargets";
-        targetsParent.transform.SetParent(fbb.transform);
+        targetsParent.transform.SetParent(rootObject.transform);
+        targetsParent.SetActive(false);
         
         bones.Add(ikRef.spine.Last());
         
@@ -103,10 +104,5 @@ public class FigurePoser : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void ToggleEditMode()
-    {
-        targetsParent.SetActive(!targetsParent.activeSelf);
     }
 }
