@@ -30,12 +30,20 @@ public class SpawnEffect : MonoBehaviour
             DoFade(0, 2, m_FadeTime);
         }
     }
-
+    
     private void Start()
     {
         if (m_IsDissolve)
         {
-            DoFade(0, 1, m_FadeTime);
+            if(TryGetComponent<Collider>(out Collider col))
+            {
+                float bottomY = col.bounds.min.y;
+                DoFade(bottomY, bottomY + 1, m_FadeTime);
+            }
+            else
+            {
+                DoFade(0, 2, m_FadeTime);
+            }
         }
     }
 
