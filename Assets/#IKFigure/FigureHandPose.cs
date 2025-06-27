@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using Unity.Collections;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.XR.Hands;
 
 public class FigureHandPose : MonoBehaviour
 {
     //public XRHandSubsystem m_HandSubsystem;
     public XRHandTrackingEvents m_HandTrackingEvents;
-    public Transform[] m_LeftHandJointTransforms;
+    public Transform m_ModelLeftHandRootTransform;
+    public Transform[] m_ModelLeftHandTransforms;
     private List<Pose> m_LeftHandJointPoses = new List<Pose>();
     public bool m_isReserved = false;
     
@@ -64,6 +66,9 @@ public class FigureHandPose : MonoBehaviour
     private void UpdateJointsData(XRHandJointsUpdatedEventArgs args)
     {
         m_LeftHandJointPoses.Clear();
+        
+        Pose rootPose = args.hand.rootPose;
+        
         for(var i = XRHandJointID.ThumbMetacarpal.ToIndex();
             i < XRHandJointID.EndMarker.ToIndex();
             i++)
@@ -78,6 +83,8 @@ public class FigureHandPose : MonoBehaviour
             if (trackingData.TryGetPose(out Pose pose))
             {
                 // 데이터는 26개 본은 20개
+                pose.position = pose.position - rootPose.position;
+                pose.rotation = Quaternion.Inverse(rootPose.rotation) * pose.rotation;
                 m_LeftHandJointPoses.Add(pose);
             }
         }
@@ -85,9 +92,10 @@ public class FigureHandPose : MonoBehaviour
 
     private void ApplyPoseData()
     {
-        for (int i = 0; i < m_LeftHandJointTransforms.Length; i++)
+        for (int i = 0; i < m_ModelLeftHandTransforms.Length; i++)
         {
-            m_LeftHandJointTransforms[i].SetLocalPose(m_LeftHandJointPoses[i]);
+            m_ModelLeftHandTransforms[i].position = Quaternion.AngleAxis(-90f, m_ModelLeftHandRootTransform.up) * m_LeftHandJointPoses[i].position + m_ModelLeftHandRootTransform.position;
+            m_ModelLeftHandTransforms[i].rotation = m_ModelLeftHandRootTransform.rotation * m_LeftHandJointPoses[i].rotation;
         }
     }
 }
