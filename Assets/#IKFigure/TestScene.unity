@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &57997645 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2952494277142534425, guid: 762d1fdf52483b944bd501d544da9d47, type: 3}
+  m_PrefabInstance: {fileID: 7890839440569811582}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &93080466 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9005654827525096876, guid: 762d1fdf52483b944bd501d544da9d47, type: 3}
@@ -321,7 +326,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HandTrackingEvents: {fileID: 2531234442613960283}
-  m_LeftHandJointTransforms:
+  m_ModelLeftHandRootTransform: {fileID: 57997645}
+  m_ModelLeftHandTransforms:
   - {fileID: 1318816261}
   - {fileID: 93080466}
   - {fileID: 2065564952}
@@ -343,6 +349,34 @@ MonoBehaviour:
   - {fileID: 127436904}
   - {fileID: 1635598834}
   m_isReserved: 0
+  jointPrefab: {fileID: 6507399986997092475, guid: 254b742d65a15d14b9df756ae77de868, type: 3}
+  debugJoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1125126555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6979093435286131514, guid: 762d1fdf52483b944bd501d544da9d47, type: 3}
@@ -2394,7 +2428,7 @@ MonoBehaviour:
   m_HandMeshMaterial: {fileID: 0}
   m_DrawMeshes: 1
   m_DebugDrawPrefab: {fileID: 6507399986997092475, guid: 254b742d65a15d14b9df756ae77de868, type: 3}
-  m_DebugDrawJoints: 0
+  m_DebugDrawJoints: 1
   m_VelocityPrefab: {fileID: 8538602047018081646, guid: 629fd7882ec6bfc499a5fcf20035282b, type: 3}
   m_VelocityType: 2
 --- !u!33 &696477661010814378
@@ -19114,6 +19148,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2815392029736067400, guid: 762d1fdf52483b944bd501d544da9d47, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0168
+      objectReference: {fileID: 0}
     - target: {fileID: 3607916076793693965, guid: 762d1fdf52483b944bd501d544da9d47, type: 3}
       propertyPath: m_Name
       value: Miru_Ikoma
@@ -21605,7 +21643,7 @@ MonoBehaviour:
   m_OriginBaseGameObject: {fileID: 4314448804526787684}
   m_CameraFloorOffsetObject: {fileID: 2449136575734555763}
   m_RequestedTrackingOriginMode: 1
-  m_CameraYOffset: 0.6
+  m_CameraYOffset: 1.36
 --- !u!4 &8907828409453447493
 Transform:
   m_ObjectHideFlags: 0
