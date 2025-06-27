@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91db4e2f-d9ff-49fd-b9cc-01a93751eb99" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/PoseEditMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/PoseEditMenu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scene/TsetScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scene/TsetScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenXR Editor Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenXR Editor Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XRI/Settings/XRInteractionEditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI/Settings/XRInteractionEditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-    </list>
+    <list default="true" id="91db4e2f-d9ff-49fd-b9cc-01a93751eb99" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,7 +145,7 @@
       <workItem from="1750897964015" duration="11173000" />
       <workItem from="1750918353528" duration="100000" />
       <workItem from="1750918475715" duration="17418000" />
-      <workItem from="1750989666633" duration="6053000" />
+      <workItem from="1750989666633" duration="6292000" />
     </task>
     <servers />
   </component>
