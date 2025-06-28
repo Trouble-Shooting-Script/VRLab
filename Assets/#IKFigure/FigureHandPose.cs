@@ -69,10 +69,12 @@ public class FigureHandPose : MonoBehaviour
             if (trackingData.TryGetPose(out Pose pose))
             {
                 pose.position = inverseParentRotation * (pose.position - rootPose.position);
+                pose.rotation = inverseParentRotation * pose.rotation;
                 
-                //debugJoints[i].position = Quaternion.AngleAxis(-90f, m_ModelLeftHandRootTransform.up) * pose.position + m_ModelLeftHandRootTransform.position;
+                debugJoints[i].position = Quaternion.AngleAxis(-90f, m_ModelLeftHandRootTransform.up) * pose.position + m_ModelLeftHandRootTransform.position;
+                debugJoints[i].rotation = Quaternion.AngleAxis(-90f, m_ModelLeftHandRootTransform.up) * pose.rotation;
                 
-                if (i is 1 or 2 or 6 or 11 or 16 or 21)
+                if (i is 0 or 1 or 6 or 11 or 16 or 21)
                 {
                     // Skip the metacarpal joints for the index, middle, ring, and little fingers
                     continue;

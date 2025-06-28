@@ -28,9 +28,6 @@ public class HandDebugger : MonoBehaviour
 
     private void UpdateJointsData(XRHandJointsUpdatedEventArgs args)
     {
-        //var joints = args.hand.GetRawJointArray();
-        //CalculateJointTransformLocalPoses(ref joints, ref m_JointLocalPoses);
-
         Pose rootPose = args.hand.rootPose;
         var inverseParentRotation = Quaternion.Inverse(rootPose.rotation);
 
@@ -43,7 +40,6 @@ public class HandDebugger : MonoBehaviour
             {
                 debugJoints[i].SetWorldPose(pose);
                 debugJoints[i].position += XROrigin.position;
-
             }
         }
     }
