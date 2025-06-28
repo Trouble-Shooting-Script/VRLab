@@ -105,10 +105,15 @@ public class FigureHandPose : MonoBehaviour
         for(int i = 0; i < newFingerDirection.Length; i++)
         {
             Vector3 direction = newFingerDirection[i];
-            if (direction != Vector3.zero)
+            direction.Normalize();
+
+            if (i is 0 or 4 or 8 or 12 or 16)
             {
-                direction.Normalize();
-                m_ModelLeftHandTransforms[i].rotation = Quaternion.FromToRotation(m_BaseFingerDirection[i], direction);
+                m_ModelLeftHandTransforms[i].localRotation = Quaternion.FromToRotation(m_BaseFingerDirection[i], direction);
+            }
+            else
+            {
+                m_ModelLeftHandTransforms[i].localRotation = Quaternion.FromToRotation(newFingerDirection[i - 1].normalized, direction);
             }
         }
         

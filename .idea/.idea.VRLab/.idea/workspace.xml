@@ -7,8 +7,6 @@
     <list default="true" id="91db4e2f-d9ff-49fd-b9cc-01a93751eb99" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/FigureHandPose.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/FigureHandPose.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/HandDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/HandDebugger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/TestScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +156,7 @@
       <workItem from="1750918475715" duration="17418000" />
       <workItem from="1750989666633" duration="6292000" />
       <workItem from="1751000334894" duration="25708000" />
-      <workItem from="1751098208077" duration="787000" />
+      <workItem from="1751098208077" duration="2041000" />
     </task>
     <servers />
   </component>
