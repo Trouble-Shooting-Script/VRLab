@@ -129,7 +129,9 @@ public class Sample : MonoBehaviour
             {
                 return Blueprint[x, y, z] is not null;
             }
+#pragma warning disable 0168
             catch (Exception e)
+#pragma warning restore 0168
             {
                 // out of index
                 return false;
