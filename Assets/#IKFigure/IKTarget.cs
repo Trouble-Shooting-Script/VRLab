@@ -5,7 +5,7 @@ using UnityEngine;
 public class IKTarget : MonoBehaviour
 {
     public Transform bindingBone;
-    public Renderer renderer;
+    public new Renderer renderer;
 
     private void Awake()
     {

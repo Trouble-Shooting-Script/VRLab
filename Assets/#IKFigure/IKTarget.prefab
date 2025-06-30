@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bindingBone: {fileID: 0}
+  renderer: {fileID: 0}
 --- !u!33 &7931652210532615929
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -6,23 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="91db4e2f-d9ff-49fd-b9cc-01a93751eb99" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/FigurePoser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/FigurePoser.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/IKTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/IKTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/IKTarget.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/IKTarget.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/Miru_Ikoma.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/Miru_Ikoma.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/PoseEditMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/PoseEditMenu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/PseudoGazeChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/PseudoGazeChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/06.Materials/CreateSpray.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/CreateSpray.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/06.Materials/CreateSprayPhase.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/CreateSprayPhase.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Cubism/Cubism_ClearEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Cubism/Cubism_ClearEffect.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Prefabs/VR Gallery Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/Prefabs/VR Gallery Prefab.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1071a2cb0cb3433aae80a793c277a04846ac00/28/4e2cba4d/TextInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37cc348edc804f4cb176b63962c716e7177200/98/f2a568af/Bounds.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37cc348edc804f4cb176b63962c716e7177200/ca/2dc1d22a/Pose.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/37cc348edc804f4cb176b63962c716e7177200/e3/0cc2c0e2/NativeArray`1.cs" root0="FORCE_HIGHLIGHTING" />
@@ -48,6 +51,8 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.hands@1.5.1/Runtime/XRHandTrackingEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/Inputs/XRTransformStabilizer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/Interaction/Interactables/XRGrabInteractable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/Interaction/Interactors/XRBaseInteractor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/Interaction/Interactors/XRSocketInteractor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/UI/BodyUI/HandMenu.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -61,8 +66,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "XThreadsFramesViewSplitterKey": "0.48929664",
     "git-widget-placeholder": "Feature/YGH",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
@@ -133,13 +140,15 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13292">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="13292" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -165,7 +174,7 @@
       <workItem from="1750989666633" duration="6292000" />
       <workItem from="1751000334894" duration="25708000" />
       <workItem from="1751098208077" duration="2512000" />
-      <workItem from="1751244796032" duration="9740000" />
+      <workItem from="1751244796032" duration="13900000" />
     </task>
     <servers />
   </component>
