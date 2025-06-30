@@ -4,7 +4,10 @@ using RootMotion;
 using RootMotion.FinalIK;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class FigurePoser : MonoBehaviour
 {
@@ -24,6 +27,10 @@ public class FigurePoser : MonoBehaviour
         "Right_Forearm",
         "Right_Hand"
     };
+
+    public XRGrabInteractable interactable;
+    public new Collider collider;
+    
     public IKTarget ikTargetPrefab;
     public GameObject poseEditMenuPrefab;
     
@@ -34,10 +41,12 @@ public class FigurePoser : MonoBehaviour
     private GameObject rootObject;
     private GameObject ikTargetRoot;
     
-	private void Start()
+	private void Awake()
 	{
+        interactable = GetComponent<XRGrabInteractable>();
+        collider = GetComponent<Collider>();
         InitializeIKTargets(fbb);
-	}
+    }
 
     public void InitializeIKTargets(FullBodyBipedIK fullBodyBipedIK)
     {
@@ -56,7 +65,7 @@ public class FigurePoser : MonoBehaviour
         menu.GetComponent<FollowTransform>().target = ikRef.head;
         
         var b = rootObject.GetComponentInChildren<Button>(true);
-        b.onClick.AddListener(ToggleIKTargets);
+        b.onClick.AddListener(ToggleEditMode);
         
         ikTargetRoot = new GameObject();
         ikTargetRoot.name = "IKTargets";
@@ -134,9 +143,10 @@ public class FigurePoser : MonoBehaviour
         }
     }
 
-    public void ToggleIKTargets()
+    public void ToggleEditMode()
     {
-        //ikTargetRoot.SetActive(!ikTargetRoot.activeSelf);
+        interactable.enabled = !interactable.enabled;
+        collider.enabled = !collider.enabled;
         foreach (IKTarget ikTarget in ikTargets)
         {
             ikTarget.gameObject.SetActive(!ikTarget.gameObject.activeSelf);
