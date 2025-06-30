@@ -10,14 +10,12 @@ using UnityEngine.XR.Hands.Processing;
 public class FigureHandPose : MonoBehaviour
 {
     private const int JOINT_PER_FINGER = 4;
-    public Transform m_ModelLeftHandRootTransform;
-    public Transform[] m_ModelLeftHandTransforms;
+    public Transform m_LeftHandRoot;
+    public Transform[] m_LeftHandJoints;
     private Vector3[] m_BaseFingerDirection = new Vector3[20];
     
     public XRHandTrackingEvents m_HandTrackingEvents;
     private List<Pose> m_LeftHandJointPoses = new List<Pose>();
-    
-    public bool m_isReserved = false;
     
     // Debug Joint
     public GameObject jointPrefab;
@@ -25,20 +23,26 @@ public class FigureHandPose : MonoBehaviour
 
     private void Awake()
     {
-        for (int i = 0; i < m_ModelLeftHandTransforms.Length; i++)
+        for (int i = 0; i < m_LeftHandJoints.Length; i++)
         {
             if ((i + 1) % JOINT_PER_FINGER == 0)
             {
                 m_BaseFingerDirection[i] = m_BaseFingerDirection[i - 1];
                 continue;
             }
-            m_BaseFingerDirection[i] = (m_ModelLeftHandTransforms[i + 1].position - m_ModelLeftHandTransforms[i].position).normalized;
+            m_BaseFingerDirection[i] = (m_LeftHandJoints[i + 1].position - m_LeftHandJoints[i].position).normalized;
         }
     }
 
     private void Start()
     {
+        if (m_HandTrackingEvents == null)
+        {
+            m_HandTrackingEvents = FindObjectOfType<XRHandTrackingEvents>();
+        }
         m_HandTrackingEvents.jointsUpdated.AddListener(OnJointsUpdated);
+        
+        // debug
         for (int i = 0; i < debugJoints.Length; i++)
         {
             debugJoints[i] = Instantiate(jointPrefab).transform;
@@ -49,13 +53,10 @@ public class FigureHandPose : MonoBehaviour
     {
         UpdateJointsData(args);
         ApplyPoseData();
-        m_isReserved = false;
     }
     
     private void UpdateJointsData(XRHandJointsUpdatedEventArgs args)
     {
-        //var joints = args.hand.GetRawJointArray();
-        //CalculateJointTransformLocalPoses(ref joints, ref m_JointLocalPoses);
         m_LeftHandJointPoses.Clear();
         
         Pose rootPose = args.hand.rootPose;
@@ -71,8 +72,8 @@ public class FigureHandPose : MonoBehaviour
                 pose.position = inverseParentRotation * (pose.position - rootPose.position);
                 pose.rotation = inverseParentRotation * pose.rotation;
                 
-                debugJoints[i].position = Quaternion.AngleAxis(-90f, m_ModelLeftHandRootTransform.up) * pose.position + m_ModelLeftHandRootTransform.position;
-                debugJoints[i].rotation = Quaternion.AngleAxis(-90f, m_ModelLeftHandRootTransform.up) * pose.rotation;
+                debugJoints[i].position = Quaternion.AngleAxis(-90f, m_LeftHandRoot.up) * pose.position + m_LeftHandRoot.position;
+                debugJoints[i].rotation = Quaternion.AngleAxis(-90f, m_LeftHandRoot.up) * pose.rotation;
                 
                 if (i is 0 or 1 or 6 or 11 or 16 or 21)
                 {
@@ -86,20 +87,21 @@ public class FigureHandPose : MonoBehaviour
 
     private void ApplyPoseData()
     {
-        for (int i = 0; i < m_ModelLeftHandTransforms.Length; i++)
+        
+        for (int i = 0; i < m_LeftHandJoints.Length; i++)
         {
-            m_ModelLeftHandTransforms[i].position = Quaternion.AngleAxis(-90f, m_ModelLeftHandRootTransform.up) * m_LeftHandJointPoses[i].position + m_ModelLeftHandRootTransform.position;
+            m_LeftHandJoints[i].position = Quaternion.AngleAxis(-90f, m_LeftHandRoot.up) * m_LeftHandRoot.rotation * m_LeftHandJointPoses[i].position + m_LeftHandRoot.position;
         }
 
         Vector3[] newFingerDirection = new Vector3[20];
-        for (int i = 0; i < m_ModelLeftHandTransforms.Length; i++)
+        for (int i = 0; i < m_LeftHandJoints.Length; i++)
         {
             if ((i + 1) % JOINT_PER_FINGER == 0)
             {
                 newFingerDirection[i] = newFingerDirection[i - 1];
                 continue;
             }
-            newFingerDirection[i] = m_ModelLeftHandTransforms[i + 1].position - m_ModelLeftHandTransforms[i].position;
+            newFingerDirection[i] = m_LeftHandJoints[i + 1].position - m_LeftHandJoints[i].position;
         }
         
         for(int i = 0; i < newFingerDirection.Length; i++)
@@ -109,17 +111,17 @@ public class FigureHandPose : MonoBehaviour
 
             if (i is 0 or 4 or 8 or 12 or 16)
             {
-                m_ModelLeftHandTransforms[i].localRotation = Quaternion.FromToRotation(m_BaseFingerDirection[i], direction);
+                m_LeftHandJoints[i].localRotation = Quaternion.FromToRotation(m_BaseFingerDirection[i], direction);
             }
             else
             {
-                m_ModelLeftHandTransforms[i].localRotation = Quaternion.FromToRotation(newFingerDirection[i - 1].normalized, direction);
+                m_LeftHandJoints[i].localRotation = Quaternion.FromToRotation(newFingerDirection[i - 1].normalized, direction);
             }
         }
         
-        for (int i = 0; i < m_ModelLeftHandTransforms.Length; i++)
+        for (int i = 0; i < m_LeftHandJoints.Length; i++)
         {
-            m_ModelLeftHandTransforms[i].position = Quaternion.AngleAxis(-90f, m_ModelLeftHandRootTransform.up) * m_LeftHandJointPoses[i].position + m_ModelLeftHandRootTransform.position;
+            m_LeftHandJoints[i].position = Quaternion.AngleAxis(-90f, m_LeftHandRoot.up) * m_LeftHandRoot.rotation * m_LeftHandJointPoses[i].position + m_LeftHandRoot.position;
         }
     }
 }
