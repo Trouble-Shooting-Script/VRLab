@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OriginBaseGameObject: {fileID: 338877106621712235}
   m_CameraFloorOffsetObject: {fileID: 2210979377788596092}
   m_RequestedTrackingOriginMode: 1
-  m_CameraYOffset: 0.6
+  m_CameraYOffset: 1.36144
 --- !u!143 &2550362607940231579
 CharacterController:
   m_ObjectHideFlags: 0
@@ -9178,7 +9178,7 @@ MonoBehaviour:
         m_MethodName: StartGame
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1460911322207032352, guid: 42aa78f19c40ece49bec19b70fb3d794, type: 3}
+          m_ObjectArgument: {fileID: 8221996918975657283, guid: 814c46effc44259408b4235cb6f1ed49, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

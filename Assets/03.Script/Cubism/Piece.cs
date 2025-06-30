@@ -198,7 +198,9 @@ public class Piece : MonoBehaviour
                     return false;
                 }
             }
+#pragma warning disable 0168
             catch (Exception e)
+#pragma warning restore 0168
             {
                 // out of index
                 //Debug.Log($"Out of index at {x}, {y}, {z}.");

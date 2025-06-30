@@ -5,217 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91db4e2f-d9ff-49fd-b9cc-01a93751eb99" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/CreateSpray.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/CreateSpray.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/CreateSprayPhase.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/CreateSprayPhase.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Spray.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Spray.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.001.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.001.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.004.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.004.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.013.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.013.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.014.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.014.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.015.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.015.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.016.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.016.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.017.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.017.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.022.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.022.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.026.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.026.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.029.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.029.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.030.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.030.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.031.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.031.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.032.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.032.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.033.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.033.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.034.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.034.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.035.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.035.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.036.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.036.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.037.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.037.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.038.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.038.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Material.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Dissolve.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Dissolve.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.004.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.004.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.015.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.015.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.017.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.017.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.026.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.026.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.030.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.030.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.033.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.033.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.035.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.035.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.036.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.036.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/Material.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/lcd.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/New Folder/lcd.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Screenshot_2022-02-21_at_12-15-00_HALOT-LI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/Screenshot_2022-02-21_at_12-15-00_HALOT-LI.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/capac.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/capac.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/internal_ground_ao_texture.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/internal_ground_ao_texture.jpeg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/lcd.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/lcd.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/resin  printer .fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/resin  printer .fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/suruburi.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/3D Printer/suruburi.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/equip_2.blend" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/02.Model/Gallery/CraftMachine/equip_2.blend.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/03.Script/CreateSpray.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/03.Script/CreateSpray.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/03.Script/Find Camera.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/03.Script/Find Camera.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/ExampleScene.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/ExampleScene/FCP_ExampleMaterial1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/ExampleScene/FCP_ExampleMaterial1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/ExampleScene/FCP_ExampleMaterial2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/ExampleScene/FCP_ExampleMaterial2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/ExampleScene/FCP_ExampleScene.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/ExampleScene/FCP_ExampleScene.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/ExampleScene/FCP_ExampleScript.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/ExampleScene/FCP_ExampleScript.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/FlexibleColorPicker.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/FlexibleColorPicker.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/FlexibleColorPickerDoc.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/FlexibleColorPickerDoc.pdf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_APicker.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_APicker.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_AlphaPreview.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_AlphaPreview.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_BPicker.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_BPicker.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_GPicker.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_GPicker.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_Gradient.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_Gradient.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_HPicker.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_HPicker.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_MainPicker.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_MainPicker.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_Preview.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_Preview.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_RPicker.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_RPicker.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_SPicker.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_SPicker.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_VPicker.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Materials/FCP_VPicker.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Scripts/FCP_Persistence.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Scripts/FCP_Persistence.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Scripts/FCP_SpriteMeshEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Scripts/FCP_SpriteMeshEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Scripts/FlexibleColorPicker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Scripts/FlexibleColorPicker.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_A_Hor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_A_Hor.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_A_Ver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_A_Ver.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_B_Hor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_B_Hor.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_B_Ver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_B_Ver.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_G_Hor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_G_Hor.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_G_Ver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_G_Ver.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_HS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_HS.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_HV.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_HV.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_H_Hor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_H_Hor.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_H_Ver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_H_Ver.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_R_Hor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_R_Hor.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_R_Ver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_R_Ver.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_SH.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_SH.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_SV.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_SV.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_S_Hor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_S_Hor.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_S_Ver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_S_Ver.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_VH.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_VH.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_VS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_VS.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_V_Hor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_V_Hor.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_V_Ver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/DefGrad_V_Ver.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_AlphaBackground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_AlphaBackground.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_BottomArrowKnob.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_BottomArrowKnob.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_HorizontalBarKnob.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_HorizontalBarKnob.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_LeftArrowKnob.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_LeftArrowKnob.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_MeshedSpriteHighDetail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_MeshedSpriteHighDetail.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_MeshedSpriteLowDetail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_MeshedSpriteLowDetail.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_RightArrowKnob.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_RightArrowKnob.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_RingKnob.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_RingKnob.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_TopArrowKnob.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_TopArrowKnob.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_VerticalBarKnob.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_VerticalBarKnob.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_WindowSprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/FlexibleColorPicker/Sprites/FCP_WindowSprite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scene/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scene/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Phase/Phase.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Phase/Phase.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Prefabs/VR Gallery Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/Prefabs/VR Gallery Prefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Script/Cubism/Sample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Script/Cubism/Sample.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Script/SpawnEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Script/SpawnEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenXR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenXR Package Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XRI_Examples/Global/RendererData/UniversalRP-HighQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI_Examples/Global/RendererData/UniversalRP-HighQuality.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XRI_Examples/Global/RendererData/UniversalRP-LowQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI_Examples/Global/RendererData/UniversalRP-LowQuality.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XRI_Examples/Global/RendererData/UniversalRP-MediumQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI_Examples/Global/RendererData/UniversalRP-MediumQuality.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/PoseEditMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/PoseEditMenu.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scene/InGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scene/InGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Cubism/Cubism_ClearEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Cubism/Cubism_ClearEffect.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Prefabs/Cubism/Cubism.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/Prefabs/Cubism/Cubism.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Script/Cubism/Piece.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Script/Cubism/Piece.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +59,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Merging Feature/YGH",
+    "git-widget-placeholder": "Feature/YGH",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -367,7 +161,7 @@
       <workItem from="1750989666633" duration="6292000" />
       <workItem from="1751000334894" duration="25708000" />
       <workItem from="1751098208077" duration="2512000" />
-      <workItem from="1751244796032" duration="3153000" />
+      <workItem from="1751244796032" duration="3923000" />
     </task>
     <servers />
   </component>
