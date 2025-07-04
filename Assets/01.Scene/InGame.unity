@@ -991,10 +991,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin (XR Rig)
       objectReference: {fileID: 0}
-    - target: {fileID: 481558772970024850, guid: bda6c76b58f6ea543ac98515381cc54d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1971491123}
     - target: {fileID: 1344042579457367582, guid: bda6c76b58f6ea543ac98515381cc54d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1035,18 +1031,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1394951104122481184, guid: bda6c76b58f6ea543ac98515381cc54d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 796763665}
-    - target: {fileID: 3521727915338492742, guid: bda6c76b58f6ea543ac98515381cc54d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 796763665}
-    - target: {fileID: 4625516318739804543, guid: bda6c76b58f6ea543ac98515381cc54d, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 796763665}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

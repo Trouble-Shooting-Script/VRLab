@@ -45,7 +45,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Cut_Line: 1.5892417
+    - _Cut_Line: 1.7156625
     - _Line_Width: 0.01
     - _QueueControl: 0
     - _QueueOffset: 0

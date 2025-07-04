@@ -2891,6 +2891,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4d5def1e4dda64dbbe1cd874453b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
+  collider: {fileID: 0}
   ikTargetPrefab: {fileID: 4093350875037498151, guid: db37b5a96b01e214ba06bca8e8d00c30, type: 3}
   poseEditMenuPrefab: {fileID: 1682720383457582126, guid: 78b4dbce79a707a489cde12d4c99791c, type: 3}
   fbb: {fileID: 1434969314}
