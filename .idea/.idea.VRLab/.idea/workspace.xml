@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91db4e2f-d9ff-49fd-b9cc-01a93751eb99" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/IKTarget.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/IKTarget.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Cubism/Cubism_ClearEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Cubism/Cubism_ClearEffect.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Prefabs/Cubism/Block/PreviewBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/Prefabs/Cubism/Block/PreviewBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Prefabs/Cubism/Block/SampleBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/Prefabs/Cubism/Block/SampleBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/03.Script/Cubism/CubismManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Script/Cubism/CubismManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewShaderVariants.shadervariants" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewShaderVariants.shadervariants" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewShaderVariants.shadervariants.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewShaderVariants.shadervariants.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Test.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/XRI_Examples/Global/RendererData/UniversalRP-HighQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI_Examples/Global/RendererData/UniversalRP-HighQuality.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="91db4e2f-d9ff-49fd-b9cc-01a93751eb99" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,7 +166,7 @@
       <workItem from="1751098208077" duration="2512000" />
       <workItem from="1751244796032" duration="13900000" />
       <workItem from="1751451362165" duration="4499000" />
-      <workItem from="1751593951334" duration="3481000" />
+      <workItem from="1751593951334" duration="4077000" />
     </task>
     <servers />
   </component>
