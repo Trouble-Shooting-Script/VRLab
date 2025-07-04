@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: -3959580072446203770}
   - component: {fileID: -15191990749110022}
   m_Layer: 0
-  m_Name: Sample
+  m_Name: Puzzle
   m_TagString: Cubism_Sample
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

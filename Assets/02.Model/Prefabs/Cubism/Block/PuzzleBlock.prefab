@@ -1380,7 +1380,7 @@ GameObject:
   - component: {fileID: 4124279490067843171}
   - component: {fileID: 440311500160966268}
   m_Layer: 0
-  m_Name: SampleBlock
+  m_Name: PuzzleBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
