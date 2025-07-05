@@ -6,16 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="91db4e2f-d9ff-49fd-b9cc-01a93751eb99" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/IKTarget.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/IKTarget.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/01.Scene/InGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scene/InGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Cubism/Cubism_ClearEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Cubism/Cubism_ClearEffect.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Cubism/Cubism_ClearEffect.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Cubism/Cubism_ClearEffect.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Prefabs/Cubism/Block/Sample.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Prefabs/Cubism/Block/Sample.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Prefabs/Cubism/Block/SampleBlock.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Prefabs/Cubism/Block/SampleBlock.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Prefabs/ShootingRoom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/Prefabs/ShootingRoom.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Prefabs/XR Origin (XR Rig).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/Prefabs/XR Origin (XR Rig).prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +26,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4e51251a0a704d64bf101aa5e2ede18d6800/d9/1e18d363/SubsystemWithProvider`3.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4e51251a0a704d64bf101aa5e2ede18d6800/e6/954916b6/SubsystemManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6fbb5ce22ecb4f05b9ab3ad5299a814b1ca00/44/90dba56a/XRHandJointID.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/#IKFigure/FigureHandPose.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/#IKFigure/FigureHandPose.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/#IKFigure/FollowTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/#IKFigure/HandDebugger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/#IKFigure/IKTarget.cs" root0="FORCE_HIGHLIGHTING" />
@@ -179,6 +169,7 @@
       <workItem from="1751244796032" duration="13900000" />
       <workItem from="1751451362165" duration="4499000" />
       <workItem from="1751593951334" duration="7953000" />
+      <workItem from="1751678619537" duration="1399000" />
     </task>
     <servers />
   </component>
