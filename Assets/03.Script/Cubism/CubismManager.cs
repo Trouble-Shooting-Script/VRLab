@@ -40,7 +40,7 @@ public class CubismManager : MonoBehaviour
     private bool isClear = false;
     
     public List<GameObject> toyBucket = new();
-    public Sample samplePrefab;
+    public Puzzle samplePrefab;
     public Piece piecePrefab;
     public Transform puzzleOffset;
     [HideInInspector] public GameObject puzzle;
@@ -134,7 +134,7 @@ public class CubismManager : MonoBehaviour
         toyBucket.Add(absBoard);
 
         // create a puzzle
-        Sample sam = Instantiate(samplePrefab, absBoard.transform);
+        Puzzle sam = Instantiate(samplePrefab, absBoard.transform);
         puzzle = sam.MakeModel(puzzleShape);
         puzzle.name = "Puzzle";
 

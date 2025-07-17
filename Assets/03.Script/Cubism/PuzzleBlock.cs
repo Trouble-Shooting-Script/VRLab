@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Shapes;
 using UnityEngine;
 
-public class SampleBlock : MonoBehaviour
+public class PuzzleBlock : MonoBehaviour
 {
     [Serializable]
     public class NeighborFlag
