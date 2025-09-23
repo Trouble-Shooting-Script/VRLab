@@ -39,9 +39,8 @@ public class CubismManager : MonoBehaviour
     private float cutLineMax = 3.0f;
     private bool isClear = false;
     
-    
     public List<GameObject> toyBucket = new();
-    public Sample samplePrefab;
+    public Puzzle samplePrefab;
     public Piece piecePrefab;
     public Transform puzzleOffset;
     [HideInInspector] public GameObject puzzle;
@@ -53,7 +52,6 @@ public class CubismManager : MonoBehaviour
     private static readonly int CUT_LINE = Shader.PropertyToID("_Cut_Line");
     public ShapeSetData currentPuzzleData;
     public int prizeCoin = 10;
-
 
     private void Awake()
     {
@@ -136,7 +134,7 @@ public class CubismManager : MonoBehaviour
         toyBucket.Add(absBoard);
 
         // create a puzzle
-        Sample sam = Instantiate(samplePrefab, absBoard.transform);
+        Puzzle sam = Instantiate(samplePrefab, absBoard.transform);
         puzzle = sam.MakeModel(puzzleShape);
         puzzle.name = "Puzzle";
 

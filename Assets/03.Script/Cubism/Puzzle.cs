@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-public class Sample : MonoBehaviour
+public class Puzzle : MonoBehaviour
 {
     private const float BLOCK_SIZE = GridSystem.CELL_SIZE * 0.9921875f;
     private static readonly Vector3 BOUND_MARGIN = Vector3.one * 2f;
@@ -14,8 +14,8 @@ public class Sample : MonoBehaviour
     public Transform center;
     public Transform bound;
     
-    public SampleBlock[,,] Blueprint;
-    public SampleBlock blockPrefab;
+    public PuzzleBlock[,,] Blueprint;
+    public PuzzleBlock blockPrefab;
     
     private void Awake()
     {
@@ -43,7 +43,7 @@ public class Sample : MonoBehaviour
         int xSize = bluePrint.GetLength(0);
         int ySize = bluePrint.GetLength(1);
         int zSize = bluePrint.GetLength(2);
-        Blueprint = new SampleBlock[xSize, ySize, zSize];
+        Blueprint = new PuzzleBlock[xSize, ySize, zSize];
         
         for (int x = 0; x < xSize; x++)
         {
@@ -96,7 +96,7 @@ public class Sample : MonoBehaviour
                         continue;
                     }
 
-                    SampleBlock b = Blueprint[x, y, z];
+                    PuzzleBlock b = Blueprint[x, y, z];
 
                     b.Flag.L = IsThere(x - 1, y, z);
                     b.Flag.R = IsThere(x + 1, y, z);

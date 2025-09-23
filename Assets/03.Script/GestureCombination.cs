@@ -23,7 +23,6 @@ public class GestureCombination : MonoBehaviour
         if(gesture1EndTime + expireTime > Time.timeSinceLevelLoad)
         {
             gestureCombinationPerformed?.Invoke();
-            TestObject.SetActive(!TestObject.activeSelf);
         }
     }
 }

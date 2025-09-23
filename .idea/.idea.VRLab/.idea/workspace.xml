@@ -6,12 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="91db4e2f-d9ff-49fd-b9cc-01a93751eb99" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VRLab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/IKTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/IKTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/IKTarget.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/IKTarget.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#IKFigure/Miru_Ikoma.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#IKFigure/Miru_Ikoma.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/06.Materials/CreateSpray.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/CreateSpray.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/06.Materials/CreateSprayPhase.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/CreateSprayPhase.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Cubism/Cubism_ClearEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Cubism/Cubism_ClearEffect.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#Test/Black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#Test/Black.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#Test/LightTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#Test/LightTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#Test/New Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#Test/New Scene/LightingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#Test/New Scene/LightingData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#Test/New Scene/ReflectionProbe-0.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#Test/New Scene/ReflectionProbe-0.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/01.Scene/InGame_Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/01.Scene/InGame_Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Cubism/NormalBlock.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/06.Materials/Cubism/NormalBlock.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/02.Model/Prefabs/Cubism/Block/Puzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/02.Model/Prefabs/Cubism/Block/Puzzle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Script/Cubism/CubismManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Script/Cubism/CubismManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Script/Cubism/Sample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Script/Cubism/Sample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Script/Cubism/SampleBlock.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Script/Cubism/SampleBlock.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/03.Script/GestureCombination.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/03.Script/GestureCombination.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_Cyan.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_Cyan.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_Green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_LightBlue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_LightBlue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_Orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_Orange.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_Red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_Violet.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_Violet.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_White.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XRI_Examples/SocketInteractors/Materials/Peg_Yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +56,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/#IKFigure/FollowTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/#IKFigure/HandDebugger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/#IKFigure/IKTarget.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/03.Script/Cubism/CubismManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/03.Script/Cubism/Editor/PieceEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/03.Script/Cubism/Piece.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/03.Script/Cubism/PuzzleBlock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Samples/XR Interaction Toolkit/3.1.2/Starter Assets/Scripts/DynamicMoveProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UniGLTF/Runtime/UniGLTF/IO/NativeArrayManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.12/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@14.0.12/Editor/Generation/Targets/BuiltIn/Editor/AssetPostProcessors/MaterialPostprocessor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -50,10 +75,13 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.hands@1.5.1/Runtime/XRHandSubsystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.hands@1.5.1/Runtime/XRHandTrackingEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/Inputs/XRTransformStabilizer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/Interaction/Interactables/XRBaseInteractable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/Interaction/Interactables/XRGrabInteractable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/Interaction/Interactors/XRBaseInteractor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/Interaction/Interactors/XRSocketInteractor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/Interaction/XRInteractionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/UI/BodyUI/HandMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@3.1.2/Runtime/Utilities/RegistrationList.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -64,23 +92,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "XThreadsFramesViewSplitterKey": "0.48929664",
-    "git-widget-placeholder": "Feature/YGH",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.48929664&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Feature/YGH&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.62f1\Editor\Unity.exe" />
@@ -140,15 +168,13 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13292">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="13292" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -175,6 +201,11 @@
       <workItem from="1751000334894" duration="25708000" />
       <workItem from="1751098208077" duration="2512000" />
       <workItem from="1751244796032" duration="13900000" />
+      <workItem from="1751451362165" duration="4499000" />
+      <workItem from="1751593951334" duration="7953000" />
+      <workItem from="1751678619537" duration="16936000" />
+      <workItem from="1752458442012" duration="144000" />
+      <workItem from="1752746380486" duration="2492000" />
     </task>
     <servers />
   </component>
