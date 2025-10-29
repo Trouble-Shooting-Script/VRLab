@@ -40,5 +40,7 @@
 - **Lock Grid Socket** : Socket의 확장 컴포넌트인 Lock Grid Socket을 사용해 진열장을 구현 했습니다.
 
 ## 4. 효과 (Effect)
+
+### 화면 전환 효과
 - **Shader** : 자연스로운 오브젝트의 생성과 화면 전환을 위해 Custom Shader를 제작해 Phase와 Dissolve 효과를 구현 했습니다.
 
